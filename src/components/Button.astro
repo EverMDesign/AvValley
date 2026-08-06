@@ -1,0 +1,31 @@
+---
+interface Props {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  class: className
+} = Astro.props;
+
+const sizeClass = size === 'sm' ? 'btn-sm' : 'btn';
+const variantClass = variant === 'primary' ? 'btn-primary' : variant === 'secondary' ? 'btn-secondary' : 'btn-outline';
+const buttonClasses = `${sizeClass} ${variantClass} ${className || ''}`.trim();
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  class:list={[buttonClasses]}
+  href={href}
+  type={href ? undefined : type}
+>
+  <slot />
+</Tag>

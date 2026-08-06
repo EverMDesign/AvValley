@@ -1,0 +1,46 @@
+---
+interface Props {
+  heading?: string;
+}
+
+const { heading = 'Contact Information' } = Astro.props;
+---
+
+<div class="bg-brand-card p-8 rounded-2xl border border-brand-border">
+  <h3 class="font-heading font-bold text-2xl text-white mb-6">{heading}</h3>
+  <ul class="space-y-6">
+    <li>
+      <a href="tel:4805674215" class="flex items-start gap-4 text-brand-muted hover:text-brand-blue transition-colors group">
+        <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center shrink-0 group-hover:border-brand-blue transition-colors">
+          <i class="ph-fill ph-phone text-xl text-brand-blue"></i>
+        </div>
+        <div>
+          <p class="text-white font-bold mb-1">Phone</p>
+          <p class="text-sm">480-567-4215</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:info@avvalley.com" class="flex items-start gap-4 text-brand-muted hover:text-brand-blue transition-colors group">
+        <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center shrink-0 group-hover:border-brand-blue transition-colors">
+          <i class="ph-fill ph-envelope-simple text-xl text-brand-blue"></i>
+        </div>
+        <div>
+          <p class="text-white font-bold mb-1">Email</p>
+          <p class="text-sm">info@avvalley.com</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <div class="flex items-start gap-4 text-brand-muted">
+        <div class="w-10 h-10 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center shrink-0">
+          <i class="ph-fill ph-map-pin text-xl text-brand-blue"></i>
+        </div>
+        <div>
+          <p class="text-white font-bold mb-1">Service Area</p>
+          <p class="text-sm leading-relaxed">Phoenix, Mesa, San Tan Valley, and surrounding Arizona areas.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

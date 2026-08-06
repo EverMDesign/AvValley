@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'AvValley | Outdoor Stage & AV Rentals',
+  description = 'Professional outdoor mobile stage rentals and AV event production packages. We bring the venue to your location for festivals, churches, and community events.',
+  canonical = 'https://avvalley.com',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/jpeg" href="/images/Av-Valley-Logo-icon.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web" is:inline></script>
+
+    <style is:global>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0A1322;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #23344F;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #169ADC;
+      }
+
+      *:focus-visible {
+        outline: 2px solid #169ADC;
+        outline-offset: 2px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card-gradient::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, #0A1322 0%, rgba(10, 19, 34, 0.7) 50%, rgba(10, 19, 34, 0.2) 100%);
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

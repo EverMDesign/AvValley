@@ -1,0 +1,139 @@
+@layer components {
+  /* ===== CARDS ===== */
+  .card {
+    @apply rounded-xl p-6 flex flex-col transition-colors;
+  }
+
+  .card-light {
+    @apply bg-brand-grey border border-gray-300;
+  }
+
+  .card-dark {
+    @apply bg-brand-card border border-brand-border;
+  }
+
+  .card-hover {
+    @apply hover:border-brand-blue;
+  }
+
+  .card-group {
+    @apply group;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    @apply px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all text-center;
+  }
+
+  .btn-primary {
+    @apply bg-brand-blue hover:bg-brand-hover text-white shadow-[0_0_15px_rgba(22,154,220,0.3)];
+  }
+
+  .btn-primary-lg {
+    @apply shadow-[0_0_20px_rgba(22,154,220,0.4)] hover:shadow-[0_0_30px_rgba(26,175,232,0.6)] hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brand-blue text-white hover:bg-brand-blue/10;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-gray-400 hover:border-brand-blue text-brand-bg;
+  }
+
+  .btn-sm {
+    @apply px-4 py-3 text-sm;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    @apply py-24 relative;
+  }
+
+  .section-light {
+    @apply bg-white;
+  }
+
+  .section-grey {
+    @apply bg-brand-grey;
+  }
+
+  .section-dark {
+    @apply bg-brand-bg;
+  }
+
+  .section-bordered {
+    @apply border-b border-brand-border;
+  }
+
+  .section-container {
+    @apply max-w-container mx-auto px-6 relative z-10;
+  }
+
+  /* ===== WRAPPERS ===== */
+  .wrapper {
+    @apply w-full;
+  }
+
+  .wrapper-light {
+    @apply bg-white text-brand-bg;
+  }
+
+  .wrapper-dark {
+    @apply bg-brand-bg text-white;
+  }
+
+  .wrapper-grey {
+    @apply bg-brand-grey text-brand-dark;
+  }
+
+  .wrapper-padded {
+    @apply px-6 py-6;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-header {
+    @apply text-center max-w-3xl mx-auto mb-16;
+  }
+
+  .section-title {
+    @apply font-heading font-bold text-4xl md:text-5xl uppercase mb-4;
+  }
+
+  .section-title-light {
+    @apply text-brand-bg;
+  }
+
+  .section-title-dark {
+    @apply text-white;
+  }
+
+  .section-title-grey {
+    @apply text-brand-dark;
+  }
+
+  .section-subtitle {
+    @apply text-lg;
+  }
+
+  .section-subtitle-light {
+    @apply text-brand-dark;
+  }
+
+  .section-subtitle-grey {
+    @apply text-brand-dark;
+  }
+
+  .section-subtitle-dark {
+    @apply text-brand-muted;
+  }
+
+  /* ===== UTILITIES ===== */
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+}

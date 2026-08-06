@@ -1,0 +1,14 @@
+---
+interface Props {
+  variant?: 'light' | 'dark';
+  hover?: boolean;
+  class?: string;
+}
+
+const { variant = 'light', hover = true, class: className } = Astro.props;
+const cardClasses = `card card-${variant} ${hover ? 'card-hover card-group' : ''} ${className || ''}`.trim();
+---
+
+<div class:list={[cardClasses]}>
+  <slot />
+</div>

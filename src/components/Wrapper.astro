@@ -1,0 +1,14 @@
+---
+interface Props {
+  variant?: 'light' | 'dark';
+  padded?: boolean;
+  class?: string;
+}
+
+const { variant = 'light', padded = false, class: className } = Astro.props;
+const wrapperClasses = `wrapper wrapper-${variant} ${padded ? 'wrapper-padded' : ''} ${className || ''}`.trim();
+---
+
+<div class:list={[wrapperClasses]}>
+  <slot />
+</div>

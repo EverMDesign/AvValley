@@ -1,0 +1,822 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectorPurchaseForm from '../components/forms/ProjectorPurchaseForm.astro';
+import QuoteSection from '../components/QuoteSection.astro';
+---
+
+<BaseLayout
+  title="Buy Professional Projectors | AvValley"
+  description="Purchase high-performance Christie and Barco projectors for outdoor events, churches, corporate venues, and production companies. Professional-grade equipment with warranty and support."
+>
+  <main class="flex-grow pt-12">
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1535016120754-fd5ac57d8b65?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Professional projector in use at large event" class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-brand-bg/85"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center my-12">
+        <div class="animate-fade-in-up">
+          <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm md:text-base mb-4">PROFESSIONAL PROJECTOR SALES</p>
+          <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.1] uppercase mb-6 text-white text-balance drop-shadow-lg">
+            Purchase<br/>Professional Projectors
+          </h1>
+          <p class="text-brand-muted text-lg md:text-xl max-w-3xl mx-auto mb-10 text-balance leading-relaxed">
+            High-performance Christie and Barco projectors for outdoor events, churches, venues, corporate installations, and production companies. Direct purchase with full warranty and technical support.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a href="#products" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(22,154,220,0.4)] hover:shadow-[0_0_30px_rgba(26,175,232,0.6)] hover:-translate-y-1">
+              Browse Available Models
+            </a>
+            <a href="#quote" class="w-full sm:w-auto bg-transparent border-2 border-brand-blue text-white hover:bg-brand-blue/10 px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all hover:-translate-y-1">
+              Request Quote
+            </a>
+          </div>
+          <p class="text-sm text-brand-muted">
+            New and premium refurbished units available for immediate delivery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Inventory Section -->
+    <section id="products" class="py-24 bg-white border-y border-brand-border relative z-20">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-brand-bg mb-4">Available Projector Models</h2>
+          <p class="text-brand-dark text-lg">
+            Professional-grade projectors for outdoor venues, large events, and institutional installations. Each unit includes comprehensive warranty and technical support.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Christie Model 1 -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col">
+            <div class="relative h-48 bg-gray-200 overflow-hidden">
+              <img src="https://avvalley.com/media/Christie Roadster HD20K-J.webp" alt="Christie professional projector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute top-4 right-4 bg-brand-blue/90 text-white px-3 py-1 rounded text-xs font-bold">IN STOCK</div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Christie Roadster HD20K-J</h3>
+              <p class="text-brand-dark text-sm mb-4">High brightness for large venues and outdoor installations</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>20,000 lumens</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>HD resolution</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>All lens available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Professional-grade performance</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-2xl">Contact for Pricing</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Request Info
+              </a>
+            </div>
+          </div>
+
+          <!-- Christie Model 2 -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col" style="transition-delay: 100ms;">
+            <div class="relative h-48 bg-gray-200 overflow-hidden">
+              <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Christie professional projector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute top-4 right-4 bg-brand-blue/90 text-white px-3 py-1 rounded text-xs font-bold">IN STOCK</div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Christie HD14K-M</h3>
+              <p class="text-brand-dark text-sm mb-4">Reliable dual-lamp projection for professional venues</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>12,500 lumens</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>HD 3DLP Dual-Lamp</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>All lens available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Year 2017 model</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-2xl">Contact for Pricing</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Request Info
+              </a>
+            </div>
+          </div>
+
+          <!-- Barco Model 1 -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col" style="transition-delay: 200ms;">
+            <div class="relative h-48 bg-gray-200 overflow-hidden">
+              <img src="https://avvalley.com/media/Barco HDX-W20 FLEX WUXGA DLP.webp" alt="Barco professional projector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute top-4 right-4 bg-amber-600/90 text-white px-3 py-1 rounded text-xs font-bold">PRE-ORDER</div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Barco HDX-W20 FLEX</h3>
+              <p class="text-brand-dark text-sm mb-4">Flexible brightness and setup for diverse venues</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>20,000 lumens</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>WUXGA DLP</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>All lens available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Flexible brightness and setup</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-2xl">Contact for Pricing</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Request Info
+              </a>
+            </div>
+          </div>
+
+          <!-- Barco Model 2 -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col" style="transition-delay: 100ms;">
+            <div class="relative h-48 bg-gray-200 overflow-hidden">
+              <img src="https://avvalley.com/media/Barco RLM-W12 11,500 Lumens.webp" alt="Barco professional projector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute top-4 right-4 bg-brand-blue/90 text-white px-3 py-1 rounded text-xs font-bold">IN STOCK</div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Barco RLM-W12</h3>
+              <p class="text-brand-dark text-sm mb-4">Portable setup for flexible venue installations</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>11,500 lumens</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>WUXGA 3-Chip DLP</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>All lens available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Portable setup</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-2xl">Contact for Pricing</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Request Info
+              </a>
+            </div>
+          </div>
+
+          <!-- Barco Model 3 -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col" style="transition-delay: 300ms;">
+            <div class="relative h-48 bg-gray-200 overflow-hidden">
+              <img src="https://avvalley.com/media/Barco RLM-W8 WUXGA 8000 Lumen.webp" alt="Barco professional projector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute top-4 right-4 bg-brand-blue/90 text-white px-3 py-1 rounded text-xs font-bold">IN STOCK</div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Barco RLM-W8</h3>
+              <p class="text-brand-dark text-sm mb-4">Compact unit with integrated lens options</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>8,000 lumens</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>WUXGA 3DLP</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>All lens available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Compact unit with lens included</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-2xl">Contact for Pricing</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Request Info
+              </a>
+            </div>
+          </div>
+
+          <!-- Additional Option -->
+          <div class="bg-brand-grey border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors flex flex-col" style="transition-delay: 400ms;">
+            <div class="relative h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+              <i class="ph-bold ph-magnifying-glass text-6xl text-gray-400/30"></i>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-heading font-bold text-xl text-brand-bg mb-2 group-hover:text-brand-blue transition-colors">Custom Specifications</h3>
+              <p class="text-brand-dark text-sm mb-4">Need different specs? We source projectors to your requirements.</p>
+
+              <ul class="space-y-2 mb-6 text-sm text-brand-dark flex-grow">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Custom lumen requirements</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Specialty lens options</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Budget-friendly solutions</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Quick turnaround sourcing</li>
+              </ul>
+
+              <div class="border-t border-gray-300 pt-4 mb-6">
+                <p class="text-brand-bg font-bold text-lg">Let's Find It</p>
+              </div>
+
+              <a href="#quote" class="w-full text-center bg-brand-blue hover:bg-brand-hover text-white px-4 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(22,154,220,0.3)]">
+                Inquire Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buyer Guidance Section -->
+    <section class="py-24 bg-brand-grey relative overflow-hidden">
+      <div class="absolute top-1/3 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-brand-bg mb-4">Choosing the Right Projector</h2>
+          <p class="text-brand-dark text-lg">
+            Select the appropriate projector based on venue size, brightness requirements, resolution needs, and installation location.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Lumen Requirements -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-lightning text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Brightness (Lumens)</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              Outdoor venues require higher lumen output (12,000+) than indoor spaces. Choose based on ambient light, screen size, and audience distance.
+            </p>
+          </div>
+
+          <!-- Venue Size -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-ruler text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Venue Size</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              Larger venues need higher lumens and longer throw distances. Small to medium venues may benefit from compact, lower-lumen models.
+            </p>
+          </div>
+
+          <!-- Resolution Needs -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-monitor text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Resolution</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              4K DCI projectors deliver sharper images for close viewing. WUXGA works well for outdoor events with general audiences.
+            </p>
+          </div>
+
+          <!-- Installation Type -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-wrench text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Installation</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              Fixed installations may benefit from permanent cooling and setup. Rental units should have quick setup and portable designs.
+            </p>
+          </div>
+
+          <!-- Budget Considerations -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-currency-circle-dollar text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Budget</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              Premium 4K models cost more but offer better image quality. Standard WUXGA options provide excellent value for general venues.
+            </p>
+          </div>
+
+          <!-- Support & Warranty -->
+          <div class="bg-white border border-gray-300 rounded-xl p-8 reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-4">
+              <i class="ph-bold ph-shield-check text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Warranty & Support</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              Comprehensive warranty and technical support protect your investment. AvValley offers maintenance plans and rapid response support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Applications Section -->
+    <section class="py-24 bg-brand-bg border-y border-brand-border relative z-20">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-white mb-4">Perfect For These Applications</h2>
+          <p class="text-brand-muted text-lg">
+            Professional projectors suit diverse venues and organizations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Churches & Worship -->
+          <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors">
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-blue transition-colors">Churches & Worship</h3>
+              <p class="text-brand-muted text-sm mb-4">
+                Display lyrics, sermons, announcements, and worship visuals. Customizable software integration for synchronized presentations.
+              </p>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Multiple screen layouts</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Flexible control systems</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Durable outdoor installations</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Corporate Events & Conferences -->
+          <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-blue transition-colors">Corporate & Conferences</h3>
+              <p class="text-brand-muted text-sm mb-4">
+                Presentations, keynotes, and live event coverage. Professional color accuracy and high resolution for detailed graphics.
+              </p>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Color calibration included</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Scalable multi-screen setups</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>On-site technical support</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Outdoor Venues & Entertainment -->
+          <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-blue transition-colors">Outdoor Venues</h3>
+              <p class="text-brand-muted text-sm mb-4">
+                Concerts, festivals, movie nights, and sports events. High-lumen output for bright sunlight and large audience visibility.
+              </p>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>High brightness outdoor specs</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Weatherproof construction</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Long throw capability</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Educational Institutions -->
+          <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-blue transition-colors">Educational Institutions</h3>
+              <p class="text-brand-muted text-sm mb-4">
+                Lecture halls, auditoriums, and outdoor classrooms. Reliable performance for academic presentations and student events.
+              </p>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Bulk institutional pricing</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Educational discounts available</li>
+                <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-blue"></i>Flexible maintenance plans</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Purchase Process Section -->
+    <section class="py-24 bg-brand-grey relative overflow-hidden">
+      <div class="absolute top-1/4 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-brand-bg mb-4">Simple Purchase Process</h2>
+          <p class="text-brand-dark text-lg">
+            From inquiry to delivery, we handle everything.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+          <!-- Step 1 -->
+          <div class="text-center reveal">
+            <div class="w-16 h-16 rounded-full bg-brand-blue text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              01
+            </div>
+            <h3 class="font-heading font-bold text-brand-bg mb-2">Inquiry</h3>
+            <p class="text-brand-dark text-sm">Contact us with your venue, audience size, and requirements.</p>
+          </div>
+
+          <!-- Arrow 1 -->
+          <div class="flex items-center justify-center reveal hidden md:flex" style="transition-delay: 100ms;">
+            <i class="ph-bold ph-arrow-right text-3xl text-brand-blue/50"></i>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center reveal" style="transition-delay: 200ms;">
+            <div class="w-16 h-16 rounded-full bg-brand-blue text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              02
+            </div>
+            <h3 class="font-heading font-bold text-brand-bg mb-2">Consultation</h3>
+            <p class="text-brand-dark text-sm">We recommend the right projector model and specs for your needs.</p>
+          </div>
+
+          <!-- Arrow 2 -->
+          <div class="flex items-center justify-center reveal hidden md:flex" style="transition-delay: 300ms;">
+            <i class="ph-bold ph-arrow-right text-3xl text-brand-blue/50"></i>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center reveal" style="transition-delay: 400ms;">
+            <div class="w-16 h-16 rounded-full bg-brand-blue text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              03
+            </div>
+            <h3 class="font-heading font-bold text-brand-bg mb-2">Quote & Order</h3>
+            <p class="text-brand-dark text-sm">Receive pricing and finalize your purchase order.</p>
+          </div>
+
+          <!-- Arrow 3 -->
+          <div class="flex items-center justify-center reveal hidden md:flex" style="transition-delay: 500ms;">
+            <i class="ph-bold ph-arrow-right text-3xl text-brand-blue/50"></i>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center reveal" style="transition-delay: 600ms;">
+            <div class="w-16 h-16 rounded-full bg-brand-blue text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              04
+            </div>
+            <h3 class="font-heading font-bold text-brand-bg mb-2">Delivery & Setup</h3>
+            <p class="text-brand-dark text-sm">Professional installation and on-site testing included.</p>
+          </div>
+
+          <!-- Arrow 4 -->
+          <div class="flex items-center justify-center reveal hidden md:flex" style="transition-delay: 700ms;">
+            <i class="ph-bold ph-arrow-right text-3xl text-brand-blue/50"></i>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="text-center reveal" style="transition-delay: 800ms;">
+            <div class="w-16 h-16 rounded-full bg-brand-blue text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              05
+            </div>
+            <h3 class="font-heading font-bold text-brand-bg mb-2">Support</h3>
+            <p class="text-brand-dark text-sm">Ongoing technical support and warranty coverage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Information Section -->
+    <section class="py-24 bg-brand-bg border-y border-brand-border relative z-20">
+      <div class="max-w-container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- New Equipment -->
+          <div class="reveal">
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-2xl mb-6">
+              <img src="https://images.unsplash.com/photo-1597933956848-52b8c0a47f76?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New professional projector" class="w-full h-auto object-cover aspect-[4/3]" />
+            </div>
+            <h3 class="font-heading font-bold text-3xl text-white mb-4">New Equipment</h3>
+            <p class="text-brand-muted text-lg leading-relaxed mb-6">
+              Factory-new units come with full manufacturer warranty and latest technology. Ideal for permanent installations and long-term use.
+            </p>
+            <ul class="space-y-3 text-brand-muted">
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Full manufacturer warranty</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Latest imaging technology</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Extended support options</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Factory testing and calibration</span></li>
+            </ul>
+          </div>
+
+          <!-- Premium Refurbished -->
+          <div class="reveal" style="transition-delay: 100ms;">
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-2xl mb-6">
+              <img src="https://images.unsplash.com/photo-1601078303922-16ec6b1a56b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium refurbished projector" class="w-full h-auto object-cover aspect-[4/3]" />
+            </div>
+            <h3 class="font-heading font-bold text-3xl text-white mb-4">Premium Refurbished</h3>
+            <p class="text-brand-muted text-lg leading-relaxed mb-6">
+              Professionally refurbished units from trusted sources. Tested, certified, and sold at significant savings without compromising reliability.
+            </p>
+            <ul class="space-y-3 text-brand-muted">
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>AvValley warranty included</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Professionally certified and tested</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Significant cost savings (30-50%)</span></li>
+              <li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-blue mt-1"></i><span>Full technical support available</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison: Purchase vs Rent Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-brand-bg mb-4">Purchase vs. Rent</h2>
+          <p class="text-brand-dark text-lg">
+            Understand which option best fits your long-term needs and budget.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto reveal">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-gray-300 bg-brand-grey">
+                <th class="text-left py-4 px-6 font-heading font-bold text-brand-bg">Consideration</th>
+                <th class="text-center py-4 px-6 font-heading font-bold text-brand-bg">Purchase</th>
+                <th class="text-center py-4 px-6 font-heading font-bold text-brand-bg">Rent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Initial Cost</td>
+                <td class="py-4 px-6 text-center text-brand-dark">High upfront investment</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Lower per-event cost</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Long-term Value</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Excellent ROI over years</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Best for occasional use</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Ownership</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Full control and ownership</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Temporary access only</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Maintenance</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Your responsibility</td>
+                <td class="py-4 px-6 text-center text-brand-dark">AvValley handles all service</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Flexibility</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Fixed to one location</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Portable and versatile</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-4 px-6 text-brand-dark">Support</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Extended warranty available</td>
+                <td class="py-4 px-6 text-center text-brand-dark">Full technical support included</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services Section -->
+    <section class="py-24 bg-brand-grey border-t border-brand-border relative z-20">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-brand-bg mb-4">Expand The Visual Experience</h2>
+          <p class="text-brand-dark text-lg">
+            Complement your purchase with our rental services.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors">
+            <div class="h-40 bg-gray-200 relative overflow-hidden">
+              <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Projector rental service" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-2xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Projector Rentals</h3>
+              <p class="text-brand-dark text-sm mb-6">
+                Short-term professional projector rental for events, churches, conferences, and outdoor venues.
+              </p>
+              <a href="/rent-projector" class="inline-block bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-6 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="h-40 bg-gray-200 relative overflow-hidden">
+              <img src="https://avvalley.com/media/stage-banner.jpg" alt="Mobile stage rental" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-2xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Mobile Stage Rentals</h3>
+              <p class="text-brand-dark text-sm mb-6">
+                Professional outdoor mobile stage systems for events, performances, and large gatherings.
+              </p>
+              <a href="/mobile-stage-rental" class="inline-block bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-6 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-300 rounded-xl overflow-hidden reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
+            <div class="h-40 bg-gray-200 relative overflow-hidden">
+              <img src="https://avvalley.com/media/Avalley-projection-mapping-community.webp" alt="Projection mapping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-heading font-bold text-2xl text-brand-bg mb-3 group-hover:text-brand-blue transition-colors">Projection Mapping</h3>
+              <p class="text-brand-dark text-sm mb-6">
+                Creative projection mapping services for events, installations, and architectural projection.
+              </p>
+              <a href="/projection-mapping" class="inline-block bg-transparent border border-gray-300 hover:border-brand-blue text-brand-bg hover:bg-brand-blue/10 px-6 py-3 rounded font-heading font-bold text-sm uppercase tracking-wider transition-colors">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote" class="py-24 bg-brand-bg border-t border-brand-border relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-brand-secondary/30 pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-white mb-4">Get Your Projector Quote</h2>
+          <p class="text-brand-muted text-lg max-w-2xl mx-auto">
+            Tell us about your venue, audience size, and technical requirements so we can recommend the perfect projector solution.
+          </p>
+        </div>
+
+        <QuoteSection
+          heading="Get Your Projector Quote"
+          description="Tell us about your venue, audience size, and technical requirements so we can recommend the perfect projector solution."
+          contactHeading="Contact Information"
+        >
+          <ProjectorPurchaseForm id="projector-purchase-form" />
+        </QuoteSection>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white border-y border-brand-border">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-brand-bg mb-4">Projector Purchase FAQ</h2>
+        </div>
+
+        <div class="space-y-4 reveal" id="faq-container">
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What is the difference between Christie and Barco projectors?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Both are professional-grade manufacturers. Christie specializes in high-lumen DCI 4K models, while Barco offers robust WUXGA solutions. Choose based on resolution needs and budget.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What warranty comes with purchased projectors?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                New units include full manufacturer warranty (typically 2-3 years). Refurbished units include our AvValley warranty (1-2 years). Extended protection plans are available.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can I get a projector with custom specifications?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. We source custom-spec units based on your lumen, resolution, lens, and other requirements. Contact us with your specifications.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Do you offer installation and setup?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes, professional installation and calibration are available as add-on services. Our team ensures proper mounting, cabling, and color calibration.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What is the typical lamp life?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Lamp life varies by model (typically 3,000-5,000 hours). We can advise on lamp replacement schedules and supply spare lamps for continuous operation.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">How long does delivery take?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                In-stock units ship within 2-3 business days. Custom orders depend on manufacturer lead times (typically 2-4 weeks). Expedited shipping available.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can I upgrade or trade in my old projector?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes, we accept trade-ins on working projectors. AvValley will assess your equipment's condition and apply credit toward a new purchase.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What payment options are available?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                We accept credit cards, wire transfer, and offer flexible financing options for qualified buyers. Contact us to discuss payment plans.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What if I need technical support after purchase?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                AvValley provides ongoing technical support via phone and email. Maintenance plans and on-site service are available for extended support.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Do you ship internationally?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Currently, we ship within the US. International inquiries are handled on a case-by-case basis. Contact us to discuss your specific needs.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Reveal animations
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        button.addEventListener('click', () => {
+          const isOpen = content.style.maxHeight;
+          faqItems.forEach(otherItem => {
+            const otherContent = otherItem.querySelector('.faq-content');
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            otherContent.style.maxHeight = null;
+            otherIcon.classList.remove('rotate-180');
+          });
+
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.add('rotate-180');
+          } else {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+
+      // Form submission
+      const quoteForm = document.getElementById('quote-form');
+      if (quoteForm) {
+        quoteForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you for your inquiry! We will get back to you shortly.');
+          quoteForm.reset();
+        });
+      }
+    });
+  </script>
+</BaseLayout>

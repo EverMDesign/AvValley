@@ -1,0 +1,152 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  showCloseButton?: boolean;
+  closeOnBackdropClick?: boolean;
+}
+
+const {
+  id,
+  title,
+  size = 'md',
+  showCloseButton = true,
+  closeOnBackdropClick = true,
+} = Astro.props;
+
+const sizeClasses = {
+  sm: 'max-w-sm',
+  md: 'max-w-md',
+  lg: 'max-w-2xl',
+  xl: 'max-w-4xl',
+  full: 'max-w-6xl',
+};
+---
+
+<!-- Modal Backdrop -->
+<div
+  id={`${id}-backdrop`}
+  class="fixed inset-0 bg-brand-bg/95 backdrop-blur-sm opacity-0 invisible transition-all duration-300 z-50 flex items-center justify-center p-4"
+  data-modal-id={id}
+>
+  <!-- Modal Container -->
+  <div
+    id={`${id}-container`}
+    class={`bg-brand-card border border-brand-border rounded-2xl shadow-2xl w-full ${sizeClasses[size]} transform transition-all duration-300 scale-95 opacity-0`}
+    data-modal-container={id}
+  >
+    <!-- Modal Header -->
+    {title && (
+      <div class="border-b border-brand-border px-8 py-6 flex items-center justify-between">
+        <h2 class="font-heading font-bold text-2xl text-white">{title}</h2>
+        {showCloseButton && (
+          <button
+            class="ml-auto text-brand-muted hover:text-white transition-colors focus:outline-none"
+            aria-label="Close modal"
+            data-close-modal={id}
+          >
+            <i class="ph ph-x text-2xl"></i>
+          </button>
+        )}
+      </div>
+    )}
+
+    {!title && showCloseButton && (
+      <div class="absolute top-6 right-6 z-10">
+        <button
+          class="text-brand-muted hover:text-white transition-colors focus:outline-none"
+          aria-label="Close modal"
+          data-close-modal={id}
+        >
+          <i class="ph ph-x text-2xl"></i>
+        </button>
+      </div>
+    )}
+
+    <!-- Modal Content -->
+    <div id={`${id}-content`} class="px-8 py-6 max-h-[calc(100vh-200px)] overflow-y-auto">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ id, closeOnBackdropClick }}>
+  // Modal functionality
+  const modalId = id;
+  const backdrop = document.getElementById(`${modalId}-backdrop`);
+  const container = document.getElementById(`${modalId}-container`);
+  const closeButtons = document.querySelectorAll(`[data-close-modal="${modalId}"]`);
+
+  // Open modal function
+  window.openModal = function(targetId) {
+    const targetBackdrop = document.getElementById(`${targetId}-backdrop`);
+    const targetContainer = document.getElementById(`${targetId}-container`);
+
+    if (targetBackdrop && targetContainer) {
+      targetBackdrop.classList.remove('opacity-0', 'invisible');
+      targetContainer.classList.remove('scale-95', 'opacity-0');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  // Close modal function
+  window.closeModal = function(targetId) {
+    const targetBackdrop = document.getElementById(`${targetId}-backdrop`);
+    const targetContainer = document.getElementById(`${targetId}-container`);
+
+    if (targetBackdrop && targetContainer) {
+      targetBackdrop.classList.add('opacity-0', 'invisible');
+      targetContainer.classList.add('scale-95', 'opacity-0');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Close button click handler
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => closeModal(modalId));
+  });
+
+  // Backdrop click handler
+  if (backdrop) {
+    backdrop.addEventListener('click', (e) => {
+      if (closeOnBackdropClick && e.target === backdrop) {
+        closeModal(modalId);
+      }
+    });
+  }
+
+  // Escape key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && backdrop && !backdrop.classList.contains('invisible')) {
+      closeModal(modalId);
+    }
+  });
+
+  // Prevent closing when clicking inside the modal container
+  if (container) {
+    container.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+
+<style>
+  /* Scrollbar styling for modal content */
+  #:where(id)-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  #:where(id)-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #:where(id)-content::-webkit-scrollbar-thumb {
+    background: #23344F;
+    border-radius: 4px;
+  }
+
+  #:where(id)-content::-webkit-scrollbar-thumb:hover {
+    background: #169ADC;
+  }
+</style>

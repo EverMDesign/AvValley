@@ -1,0 +1,693 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SilentDiscoForm from '../components/forms/SilentDiscoForm.astro';
+import QuoteSection from '../components/QuoteSection.astro';
+---
+
+<BaseLayout
+  title="Silent Disco Party Rentals in Arizona | AvValley"
+  description="Rent wireless silent-disco headphones for parties, weddings, schools, churches, festivals, corporate events, and outdoor experiences. Check availability with AvValley."
+>
+  <main class="flex-grow pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://avvalley.com/media/Avvalley-silent-disco-feastival.webp" alt="Guests wearing illuminated wireless headphones at a party event" class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-brand-bg/85"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div class="reveal" style="transition-delay: 200ms;">
+          <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm md:text-base mb-4">A DIFFERENT WAY TO EXPERIENCE MUSIC</p>
+          <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.1] uppercase mb-6 text-white text-balance drop-shadow-lg">
+            Silent Disco<br/>Party Rentals
+          </h1>
+          <p class="text-brand-muted text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+            A silent disco replaces or supplements a traditional loudspeaker system with wireless headphones. Each guest receives a headset and can listen to the audio channels available during the event.
+          </p>
+          <a href="#quote" class="inline-block bg-brand-blue hover:bg-brand-hover text-white px-8 py-3.5 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)] hover:shadow-[0_0_20px_rgba(26,175,232,0.5)]">
+            Discuss Your Event
+          </a>
+          <p class="text-sm text-brand-muted mt-6">
+            Perfect for weddings, parties, school events, corporate gatherings, and more.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Steps Section -->
+    <section class="py-24 bg-brand-bg relative overflow-hidden">
+      <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-white mb-4">How The Experience Works</h2>
+          <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl relative reveal">
+            <div class="text-6xl font-heading font-bold text-brand-border mb-6">01.</div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Distribute The Headphones</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Each participating guest receives a wireless headset.</p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl relative reveal" style="transition-delay: 100ms;">
+            <div class="text-6xl font-heading font-bold text-brand-border mb-6">02.</div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Select An Audio Channel</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Guests use controls on the headphones to choose between the available music or audio channels.</p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl relative reveal" style="transition-delay: 200ms;">
+            <div class="text-6xl font-heading font-bold text-brand-border mb-6">03.</div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Adjust Personal Volume</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Each person can control the listening volume directly from the headset.</p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl relative reveal" style="transition-delay: 300ms;">
+            <div class="text-6xl font-heading font-bold text-brand-blue mb-6 drop-shadow-[0_0_10px_rgba(22,154,220,0.5)]">04.</div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Enjoy The Event Together</h3>
+            <p class="text-brand-muted text-sm leading-relaxed">Guests can dance, participate, or listen together while choosing the audio experience they prefer.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 reveal" style="transition-delay: 400ms;">
+          <p class="text-sm text-brand-muted flex items-center justify-center gap-2">
+            <i class="ph-fill ph-info text-brand-blue"></i>
+            The number of available channels depends on the confirmed equipment package.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="py-12 bg-brand-bg relative z-10">
+      <div class="max-w-4xl mx-auto px-6 text-center reveal">
+        <div class="bg-brand-card border border-brand-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-brand-blue transition-colors">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-blue to-transparent"></div>
+
+          <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm mb-3">HEADPHONES FOR SMALL AND LARGE EVENTS</p>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl uppercase text-white mb-6">200+ Premium Wireless Headphones Available</h2>
+          <p class="text-brand-muted text-lg mb-10 leading-relaxed">
+            Build a rental package based on your expected attendance and event requirements.
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left border-y border-brand-border py-8 mb-10">
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Inventory</p>
+              <p class="font-heading font-bold text-white">200+ Available</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Max Attendance</p>
+              <p class="font-heading font-bold text-white">200+ Guests</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Channels</p>
+              <p class="font-heading font-bold text-white">Up to 3 Channels</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Battery Life</p>
+              <p class="font-heading font-bold text-white">Confirmed Duration</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Environment</p>
+              <p class="font-heading font-bold text-white">Indoor / Outdoor</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Delivery</p>
+              <p class="font-heading font-bold text-white">Options Available</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Setup Support</p>
+              <p class="font-heading font-bold text-white">Optional Add-on</p>
+            </div>
+            <div>
+              <p class="text-xs text-brand-muted uppercase tracking-wider mb-1">Rental Duration</p>
+              <p class="font-heading font-bold text-white">Single / Multi-day</p>
+            </div>
+          </div>
+
+          <a href="#quote" class="inline-block bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)] hover:shadow-[0_0_20px_rgba(26,175,232,0.5)]">
+            Request Inventory Availability
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white border-y border-gray-300">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-brand-bg mb-4">Wireless Headphone Features</h2>
+          <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-waves text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Clear Wireless Audio</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Guests hear the selected audio directly through their headset without depending on a central loudspeaker system.</p>
+          </div>
+
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal" style="transition-delay: 100ms;">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-faders text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Multi-Channel Selection</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Allow guests to switch between available DJs, playlists, presentations, or audio programs.</p>
+          </div>
+
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal" style="transition-delay: 200ms;">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-speaker-high text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Personal Volume Control</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Each guest can adjust the volume from the headset.</p>
+          </div>
+
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal" style="transition-delay: 300ms;">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-smiley text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Comfortable Fit</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Lightweight, adjustable headphones designed for extended event use.</p>
+          </div>
+
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal" style="transition-delay: 400ms;">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-palette text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Channel Identification</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Use available headset indicators to help guests identify which audio channel they selected.</p>
+          </div>
+
+          <div class="bg-brand-grey border border-gray-300 p-8 rounded-xl hover:border-brand-blue transition-colors group reveal" style="transition-delay: 500ms;">
+            <div class="w-12 h-12 bg-white rounded-lg border border-gray-300 flex items-center justify-center mb-6 group-hover:bg-brand-blue/10 transition-colors">
+              <i class="ph ph-battery-charging text-2xl text-brand-blue"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Rechargeable Operation</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">Headphones are prepared and charged before the confirmed rental period.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-24 bg-brand-bg">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-white mb-4">Why Event Planners Choose Silent Disco</h2>
+          <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex gap-4 reveal">
+            <div class="mt-1">
+              <i class="ph-fill ph-check-circle text-brand-blue text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-xl mb-2">1. Multiple Experiences At Once</h4>
+              <p class="text-brand-muted leading-relaxed">Offer different DJs, music genres, presentations, or audio programs during the same event.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 reveal" style="transition-delay: 100ms;">
+            <div class="mt-1">
+              <i class="ph-fill ph-check-circle text-brand-blue text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-xl mb-2">2. Personal Listening Control</h4>
+              <p class="text-brand-muted leading-relaxed">Guests select their preferred channel and listening volume.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 reveal" style="transition-delay: 200ms;">
+            <div class="mt-1">
+              <i class="ph-fill ph-check-circle text-brand-blue text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-xl mb-2">3. Flexible Event Format</h4>
+              <p class="text-brand-muted leading-relaxed">Use the headphones for dancing, presentations, guided activities, fitness sessions, screenings, or group audio experiences.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 reveal" style="transition-delay: 300ms;">
+            <div class="mt-1">
+              <i class="ph-fill ph-check-circle text-brand-blue text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-xl mb-2">4. Reduced Speaker Dependence</h4>
+              <p class="text-brand-muted leading-relaxed">Create an event without relying entirely on high-volume main speakers.</p>
+              <p class="text-xs text-brand-border mt-2 italic">* Note: Event organizers remain responsible for venue and municipal noise ordinance requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-24 bg-brand-grey border-y border-gray-300">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-brand-bg mb-4">Silent Disco Rentals For More Than Dance Parties</h2>
+          <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-wedding.webp" alt="Weddings and Receptions" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Weddings & Receptions</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Keep the party going after venue curfews.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-private-party.webp" alt="Private Parties" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Private Parties</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Host unique celebrations at any location.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silen-disco-corporate.webp" alt="Corporate Events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Corporate Events</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Engaging entertainment for team building.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-school.webp" alt="School and College Events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">School & College Events</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Interactive dances and campus activities.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-church.webp" alt="Church and Youth Events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Church & Youth Events</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Multi-program youth group experiences.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-feastival.webp" alt="Festivals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Festivals</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Dedicated silent stages and late-night sets.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-community.webp" alt="Community Events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Community Events</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Noise-friendly public gatherings.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+
+          <div class="relative h-48 rounded-xl overflow-hidden group border border-brand-border card-gradient">
+            <img src="https://avvalley.com/media/Avvalley-silent-disco-gym.webp" alt="Fitness Classes" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-5">
+              <h3 class="font-heading font-bold text-lg text-white mb-1">Fitness Classes</h3>
+              <p class="text-brand-muted text-xs mb-2 line-clamp-1">Immersive yoga or workout sessions.</p>
+              <a href="#quote" class="text-brand-blue text-xs font-bold uppercase tracking-wider hover:text-brand-hover">Plan This Event →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-brand-bg relative">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-white mb-4">Choose The Right Silent Disco Package</h2>
+          <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl hover:border-brand-blue transition-colors flex flex-col h-full reveal">
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">1. Headphone-Only Rental</h3>
+            <p class="text-brand-blue text-sm font-semibold mb-4">Best for customers who already have their own audio sources, DJs, and event staff.</p>
+            <p class="text-brand-text font-semibold text-sm mb-3">Can include:</p>
+            <ul class="space-y-2 mb-8 flex-grow">
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Confirmed quantity of wireless headphones</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Charging equipment</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Required transmitters</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Basic operating instructions</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Pickup or delivery options</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-transparent border border-brand-blue text-white hover:bg-brand-blue px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors">Request Package Quote</a>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border p-8 rounded-xl hover:border-brand-blue transition-colors flex flex-col h-full reveal" style="transition-delay: 100ms;">
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">2. Standard Silent Disco Package</h3>
+            <p class="text-brand-blue text-sm font-semibold mb-4">Best for private parties, school events, churches, and smaller organized events.</p>
+            <p class="text-brand-text font-semibold text-sm mb-3">Can include:</p>
+            <ul class="space-y-2 mb-8 flex-grow">
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Wireless headphones</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Audio transmitters</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Multiple channel capability</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Equipment setup guidance</li>
+              <li class="flex items-start gap-2 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Basic technical support</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-transparent border border-brand-blue text-white hover:bg-brand-blue px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors">Request Package Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 bg-white border-y border-gray-300">
+      <div class="max-w-3xl mx-auto px-6 text-center reveal">
+        <div class="bg-brand-card border border-brand-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-white mb-6">Silent Disco Headphone Rental Pricing</h2>
+
+          <div class="mb-8">
+            <p class="text-brand-muted text-lg">Starting at approximately</p>
+            <p class="font-heading font-bold text-5xl text-brand-blue my-2">$5 <span class="text-2xl text-white">/headphone</span></p>
+            <p class="text-sm text-brand-muted">per rental day</p>
+          </div>
+
+          <div class="bg-brand-secondary border border-brand-border rounded-lg p-4 mb-8 text-left">
+            <p class="text-sm text-white font-semibold mb-2 flex items-center gap-2">
+              <i class="ph-fill ph-info text-brand-blue"></i>
+              This is a planning rate and not necessarily the final quote.
+            </p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Final pricing and availability depend on the confirmed headphone quantity, event date, location, rental duration, and support requirements.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-left text-sm mb-10">
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Min. Quantity</p>
+              <p class="text-white font-semibold">Confirmed Amount</p>
+            </div>
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Min. Order</p>
+              <p class="text-white font-semibold">Minimum Value</p>
+            </div>
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Multi-Day</p>
+              <p class="text-white font-semibold">Discounts Available</p>
+            </div>
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Delivery / Setup</p>
+              <p class="text-white font-semibold">Quoted Separately</p>
+            </div>
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Security Deposit</p>
+              <p class="text-white font-semibold">If Applicable</p>
+            </div>
+            <div class="border-l-2 border-brand-blue pl-3">
+              <p class="text-brand-muted text-xs uppercase">Damage / Loss</p>
+              <p class="text-white font-semibold">Replacement Cost</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-brand-muted mb-6">Pricing may also depend on number of audio channels, transmitter requirements, technical support, lighting or AV add-ons, cleaning, preparation, and event staffing.</p>
+
+          <div>
+            <a href="#quote" class="inline-block bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)] hover:shadow-[0_0_20px_rgba(26,175,232,0.5)]">
+              Get A Custom Rental Quote
+            </a>
+            <p class="text-[10px] text-brand-border mt-3 uppercase tracking-widest">Rate does not guarantee inclusion of transmitters, delivery, setup, labor, taxes, deposits, or support unless specified in quote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services Section -->
+    <section class="py-24 bg-white border-t border-gray-300">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-brand-bg mb-4">Enhance Your Event Experience</h2>
+          <p class="text-brand-dark text-lg">Combine silent disco with other professional rental services.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <a href="/mobile-stage-rental" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient">
+            <img src="https://avvalley.com/media/Avalley-projection-mapping-concert.webp" alt="Mobile Stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Mobile Stage Rental</h3>
+            </div>
+          </a>
+          <a href="/outdoor-movie-rentals" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 100ms;">
+            <img src="https://avvalley.com/media/POOL-PARTY.jpg" alt="Outdoor Movie Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Outdoor Movie Rentals</h3>
+            </div>
+          </a>
+          <a href="/rent-projector" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 200ms;">
+            <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Projector Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Projector Rentals</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="relative py-24 overflow-hidden border-t border-brand-border bg-brand-bg">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Concert crowd background" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-brand-bg/95 backdrop-blur-sm"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-white mb-6">Check Silent Disco Availability</h2>
+          <p class="text-brand-muted text-lg max-w-2xl mx-auto mb-8">
+            Tell us about your event so AvValley can confirm headphone inventory, channel requirements, logistics, and pricing.
+          </p>
+        </div>
+
+        <QuoteSection contactHeading="Contact Information">
+          <SilentDiscoForm id="silent-disco-form" />
+        </QuoteSection>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white border-t border-brand-border">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-brand-bg mb-4">Silent Disco Rental Questions</h2>
+        </div>
+
+        <div class="space-y-4 reveal" id="faq-container">
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">1. What is a silent disco?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                A silent disco is an event where guests wear wireless headphones to listen to music or audio. Rather than using a main speaker system, each guest controls their own listening experience by selecting between available audio channels and adjusting their personal volume.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">2. How many wireless headphones are available?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                AvValley has 200+ premium wireless headphones available for rental. You can request the exact quantity needed for your event, whether it's for 25 guests or 200+ guests.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">3. How many audio channels can guests choose from?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                The number of available channels depends on the equipment and event plan. Most setups support 2–3 channels, with the possibility of 4 channels under specific configurations. Discuss your needs when requesting a quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">4. Can each guest control their own volume?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. Each guest can adjust the volume directly from their headset, providing personalized control over their listening experience throughout the event.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">5. Can we use multiple DJs or playlists?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Absolutely. A silent disco is ideal for multi-DJ events. Guests can switch between channels to listen to different DJs, music genres, or playlists operating simultaneously during the same event.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">6. Is silent disco suitable for outdoor events?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. Silent disco works well for outdoor events and is especially useful for festivals, outdoor weddings, and community gatherings where noise concerns might exist. Equipment must be protected from rain or moisture.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">7. Do you provide delivery and setup?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. Delivery and setup options are available as part of rental packages. Confirm your specific logistics needs when requesting a quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">8. Can AvValley help distribute and collect the headphones?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. Supported distribution is available as an optional add-on. AvValley staff can assist with setup, guest instructions, distribution, and collection to ensure a smooth experience.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">9. What happens if a headphone is lost or damaged?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                AvValley can discuss damage and loss policies during the quote process. Typically, clients are responsible for headphones distributed to guests, and damage or loss may be subject to replacement fees.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">10. Can the headphones be rented for multiple days?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. Multi-day rentals are available and may have different pricing than single-day rentals. Discuss your duration and dates when requesting a quote.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        button.addEventListener('click', () => {
+          const isOpen = content.style.maxHeight;
+          faqItems.forEach(otherItem => {
+            const otherContent = otherItem.querySelector('.faq-content');
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            otherContent.style.maxHeight = null;
+            otherIcon.classList.remove('rotate-180');
+          });
+
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.add('rotate-180');
+          } else {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+
+      // Gallery Filter
+      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'bg-brand-blue', 'text-white');
+            b.classList.add('text-brand-muted');
+          });
+          btn.classList.add('active');
+          btn.classList.remove('text-brand-muted');
+          
+          const filterValue = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+              setTimeout(() => item.classList.add('active'), 50);
+            } else {
+              item.style.display = 'none';
+              item.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</BaseLayout>

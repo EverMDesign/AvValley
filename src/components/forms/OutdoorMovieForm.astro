@@ -1,0 +1,107 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id = 'outdoor-movie-form' } = Astro.props;
+---
+
+<div class="w-full">
+  <!-- Form Header -->
+  <div class="mb-8">
+    <h3 class="font-heading font-bold text-2xl text-white mb-2">Check Movie Screen Availability</h3>
+    <p class="text-brand-muted text-sm">Tell us about your event so AvValley can recommend the appropriate screen, projection, sound, and support package.</p>
+  </div>
+
+  <!-- Success Message -->
+  <div id={`${id}-success`} class="hidden bg-brand-success/10 border border-brand-success text-brand-success p-4 rounded-lg mb-6">
+    <p class="font-bold text-sm">Thank you! We'll contact you soon with screen availability and recommendations.</p>
+  </div>
+
+  <!-- Form -->
+  <form id={id} class="space-y-6">
+    <!-- Contact Information -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Full Name *</label>
+        <input type="text" name="name" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Organization or Company</label>
+        <input type="text" name="organization" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Email Address *</label>
+        <input type="email" name="email" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Phone Number *</label>
+        <input type="tel" name="phone" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Event Date *</label>
+        <input type="date" name="event_date" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors [color-scheme:dark]" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Event Location (City/Zip) *</label>
+        <input type="text" name="location" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Event Type</label>
+        <input type="text" name="event_type" placeholder="e.g. HOA Party, Church, School" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Expected Attendance</label>
+        <input type="number" name="attendance" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-brand-muted mb-2">Preferred Screen Size *</label>
+        <select name="screen_package" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
+          <option value="">Select a screen size...</option>
+          <option value="Backyard Screen (Small) - 24′ x 14′">Backyard Screen (Small) - 24′ x 14′</option>
+          <option value="Giant Screen (Large) - 40′ x 22′">Giant Screen (Large) - 40′ x 22′</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Additional Details -->
+    <div>
+      <label class="block text-sm font-medium text-brand-muted mb-2">Event Details</label>
+      <textarea name="message" rows="4" placeholder="Any specific requirements, terrain details, or notes..." class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors resize-none"></textarea>
+    </div>
+
+    <!-- Consent -->
+    <div class="flex items-start gap-3 border-t border-brand-border pt-6">
+      <div class="flex items-center h-5 mt-1">
+        <input id="consent-check" name="consent" type="checkbox" required class="w-4 h-4 bg-brand-bg border-brand-border rounded focus:ring-brand-blue accent-brand-blue cursor-pointer" />
+      </div>
+      <label for="consent-check" class="text-xs text-brand-muted leading-relaxed cursor-pointer hover:text-white transition-colors">
+        I consent to AvValley contacting me regarding this quote request. Your information is kept secure according to our privacy policy.
+      </label>
+    </div>
+
+    <button type="submit" class="w-full bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)]">
+      Check Screen Availability
+    </button>
+  </form>
+</div>
+
+<script define:vars={{ id }}>
+  const form = document.getElementById(id);
+  const successDiv = document.getElementById(`${id}-success`);
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('Outdoor Movie Form Submitted:', new FormData(form));
+      form.style.display = 'none';
+      successDiv.classList.remove('hidden');
+      setTimeout(() => {
+        form.reset();
+        form.style.display = '';
+        successDiv.classList.add('hidden');
+      }, 3000);
+    });
+  }
+</script>

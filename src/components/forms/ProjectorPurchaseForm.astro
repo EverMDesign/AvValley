@@ -1,0 +1,118 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id = 'projector-purchase-form' } = Astro.props;
+---
+
+<div class="w-full">
+  <!-- Success Message -->
+  <div id={`${id}-success`} class="hidden bg-brand-success/10 border border-brand-success text-brand-success p-4 rounded-lg mb-6">
+    <p class="font-bold text-sm">Thank you! We'll send you a projector quote shortly.</p>
+  </div>
+
+  <!-- Form -->
+  <form id={id} class="space-y-6">
+    <!-- Contact Information -->
+    <div class="space-y-4">
+      <h4 class="font-heading font-bold text-sm text-brand-blue uppercase tracking-wide border-b border-brand-border pb-2">Contact Information</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Full Name *</label>
+          <input type="text" name="name" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Organization or Company</label>
+          <input type="text" name="organization" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Email Address *</label>
+          <input type="email" name="email" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Phone Number *</label>
+          <input type="tel" name="phone" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Projector Selection -->
+    <div class="space-y-4">
+      <h4 class="font-heading font-bold text-sm text-brand-blue uppercase tracking-wide border-b border-brand-border pb-2">Projector Interest</h4>
+      <div class="grid grid-cols-1 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Which projector interests you? *</label>
+          <select name="projector_model" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
+            <option value="">Select a projector...</option>
+            <option value="Christie Roadster HD20K-J">Christie Roadster HD20K-J (20,000 lumens, HD)</option>
+            <option value="Christie HD14K-M">Christie HD14K-M (12,500 lumens, HD 3DLP)</option>
+            <option value="Barco HDX-W20 FLEX">Barco HDX-W20 FLEX (20,000 lumens, WUXGA)</option>
+            <option value="Barco RLM-W12">Barco RLM-W12 (11,500 lumens, WUXGA)</option>
+            <option value="Barco RLM-W8">Barco RLM-W8 (8,000 lumens, WUXGA)</option>
+            <option value="Not sure yet">Not sure yet - help me choose</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Venue Information -->
+    <div class="space-y-4">
+      <h4 class="font-heading font-bold text-sm text-brand-blue uppercase tracking-wide border-b border-brand-border pb-2">Venue Information</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Venue Type *</label>
+          <select name="venue_type" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
+            <option value="">Select venue type...</option>
+            <option value="Church">Church or Worship</option>
+            <option value="Corporate">Corporate or Conference</option>
+            <option value="Outdoor">Outdoor Event Venue</option>
+            <option value="Educational">Educational Institution</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-brand-muted mb-2">Expected Audience Size</label>
+          <input type="number" name="audience_size" placeholder="e.g. 500" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Details -->
+    <div>
+      <label class="block text-sm font-medium text-brand-muted mb-2">Questions or Special Requirements</label>
+      <textarea name="message" rows="3" placeholder="Any questions about the projector? Special installation needs? Budget considerations?" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors resize-none"></textarea>
+    </div>
+
+    <!-- Consent -->
+    <div class="flex items-start gap-3">
+      <input id="consent-check" type="checkbox" name="consent" required class="w-4 h-4 bg-brand-bg border-brand-border rounded focus:ring-brand-blue accent-brand-blue mt-1 cursor-pointer" />
+      <label for="consent-check" class="text-xs text-brand-muted leading-relaxed cursor-pointer hover:text-white transition-colors">
+        I consent to AvValley contacting me regarding this projector inquiry. Your information is kept secure according to our privacy policy.
+      </label>
+    </div>
+
+    <button type="submit" class="w-full bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)]">
+      Get Projector Quote
+    </button>
+  </form>
+</div>
+
+<script define:vars={{ id }}>
+  const form = document.getElementById(id);
+  const successDiv = document.getElementById(`${id}-success`);
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('Projector Purchase Form Submitted:', new FormData(form));
+      form.style.display = 'none';
+      successDiv.classList.remove('hidden');
+      setTimeout(() => {
+        form.reset();
+        form.style.display = '';
+        successDiv.classList.add('hidden');
+      }, 3000);
+    });
+  }
+</script>

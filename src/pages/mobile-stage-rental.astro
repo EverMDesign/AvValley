@@ -1,0 +1,584 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StageRentalForm from '../components/forms/StageRentalForm.astro';
+import QuoteSection from '../components/QuoteSection.astro';
+---
+
+<BaseLayout
+  title="22′ × 20′ Mobile Stage Rental | AvValley"
+  description="Rent a professional 22'x20' mobile outdoor stage for festivals, churches, concerts, and community events. Stage-only and complete AV packages available."
+  canonical="https://avvalley.com/mobile-stage-rental/"
+>
+
+  <main class="flex-grow pt-12">
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://avvalley.com/media/stage-banner.jpg" alt="Large outdoor concert stage at night with professional lighting" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-brand-bg/85"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center my-12">
+        <div class="animate-fade-in-up">
+          <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm md:text-base mb-4">MOBILE STAGE RENTAL</p>
+          <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.1] uppercase mb-6 text-white text-balance drop-shadow-lg">
+            22′ × 20′ Mobile<br>Stage Rental
+          </h1>
+          <p class="text-brand-muted text-lg md:text-xl max-w-3xl mx-auto mb-10 text-balance leading-relaxed">
+            Create a professional outdoor performance or presentation space for festivals, churches, conferences, concerts, community events, and live productions.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a href="#quote" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(22,154,220,0.4)] hover:shadow-[0_0_30px_rgba(26,175,232,0.6)] hover:-translate-y-1">
+              Request Stage Availability
+            </a>
+            <a href="#packages" class="w-full sm:w-auto bg-transparent border-2 border-brand-blue text-white hover:bg-brand-blue/10 px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all hover:-translate-y-1">
+              Build Your Event Package
+            </a>
+          </div>
+          <p class="text-sm text-brand-muted font-medium">
+            Stage-only and complete AV packages available.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage Details Section -->
+    <section class="py-24 bg-brand-grey relative overflow-hidden">
+      <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl reveal group">
+            <img src="https://avvalley.com/media/Stage-Empty-Chairs.jpg" alt="Mobile stage setup for an outdoor event" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-secondary/40 mix-blend-multiply pointer-events-none"></div>
+          </div>
+
+          <div class="reveal">
+            <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm mb-3">PROFESSIONAL OUTDOOR STAGING</p>
+            <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-brand-bg mb-6 leading-tight">A Flexible Stage For Live Events</h2>
+            <p class="text-brand-dark text-lg mb-8 leading-relaxed">
+              The AvValley 22′ × 20′ mobile stage provides a professional focal point for outdoor events. It can be rented as a standalone stage or combined with sound, lighting, microphones, stage monitors, screens, and event-production support.
+            </p>
+
+            <ul class="flex flex-col gap-4 mb-10">
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">Outdoor concerts and festivals</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">Church services and worship nights</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">Conferences and speaking events</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">Community and municipal events</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">School and nonprofit events</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-blue text-xl shrink-0 mt-0.5"></i>
+                <span class="text-brand-bg">AV-company and production subrentals</span>
+              </li>
+            </ul>
+
+            <a href="#quote" class="inline-block text-center bg-brand-blue hover:bg-brand-hover text-white px-8 py-3.5 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)]">
+              Request A Custom Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- At A Glance Section -->
+    <section class="py-16 bg-white border-y border-brand-border">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-heading font-bold text-3xl uppercase text-brand-bg">Stage Rental At A Glance</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-brand-grey border border-gray-300 p-6 rounded-xl text-center hover:border-brand-blue transition-colors reveal">
+            <i class="ph ph-ruler text-3xl text-brand-blue mb-4"></i>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-2 uppercase">Stage Size</h3>
+            <p class="text-brand-dark text-sm">22 feet × 20 feet</p>
+          </div>
+          <div class="bg-brand-grey border border-gray-300 p-6 rounded-xl text-center hover:border-brand-blue transition-colors reveal" style="transition-delay: 100ms;">
+            <i class="ph ph-package text-3xl text-brand-blue mb-4"></i>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-2 uppercase">Rental Options</h3>
+            <p class="text-brand-dark text-sm">Stage-only or packaged with AV equipment</p>
+          </div>
+          <div class="bg-brand-grey border border-gray-300 p-6 rounded-xl text-center hover:border-brand-blue transition-colors reveal" style="transition-delay: 200ms;">
+            <i class="ph ph-users-three text-3xl text-brand-blue mb-4"></i>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-2 uppercase">Event Types</h3>
+            <p class="text-brand-dark text-sm">Music, worship, speaking, festivals, and community events</p>
+          </div>
+          <div class="bg-brand-grey border border-gray-300 p-6 rounded-xl text-center hover:border-brand-blue transition-colors reveal" style="transition-delay: 300ms;">
+            <i class="ph ph-calendar-plus text-3xl text-brand-blue mb-4"></i>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-2 uppercase">Multi-Day Options</h3>
+            <p class="text-brand-dark text-sm">Single-day and extended rental options available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-brand-bg relative">
+      <div class="absolute right-0 top-20 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-white mb-4">Choose The Level of Support You Need</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-brand-card border border-brand-border rounded-xl p-8 flex flex-col reveal group hover:border-brand-blue transition-colors">
+            <div class="mb-6">
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Stage-Only Rental</h3>
+              <p class="text-brand-blue text-sm font-medium mb-4">Best for customers who already have their own AV or production team.</p>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mobile stage</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Delivery</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Stage setup</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Stage breakdown</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-plus text-brand-border mt-0.5"></i> Optional equipment add-ons</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-transparent border border-brand-border group-hover:border-brand-blue text-white px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors">Request Package Quote</a>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border rounded-xl p-8 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
+            <div class="mb-6">
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Stage + Sound</h3>
+              <p class="text-brand-blue text-sm font-medium mb-4">Best for speaking events, churches, and smaller live productions.</p>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mobile stage</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Main speakers</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mixer</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Microphones</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-plus text-brand-border mt-0.5"></i> Optional podium</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-plus text-brand-border mt-0.5"></i> Optional stage monitors</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-transparent border border-brand-border group-hover:border-brand-blue text-white px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors mt-auto">Request Package Quote</a>
+          </div>
+
+          <div class="bg-brand-card border border-brand-blue/50 relative overflow-hidden rounded-xl p-8 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
+            <div class="absolute top-0 right-0 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">Popular</div>
+            <div class="mb-6">
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Band-Ready Package</h3>
+              <p class="text-brand-blue text-sm font-medium mb-4">Best for concerts, worship teams, festivals, and live bands.</p>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mobile stage</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Line-array sound system</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Subwoofers & stage monitors</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mixer & microphones</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Stage lighting</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-brand-blue text-white px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors hover:bg-brand-hover mt-auto shadow-[0_0_15px_rgba(22,154,220,0.3)]">Request Package Quote</a>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border rounded-xl p-8 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 300ms;">
+            <div class="mb-6">
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Full Event AV Package</h3>
+              <p class="text-brand-blue text-sm font-medium mb-4">Best for larger productions needing coordinated staging, audio, lighting, and visuals.</p>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Mobile stage</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Professional sound system & monitors</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Microphones & lighting</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> LED walls or side screens available</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Podium and speaking support</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><i class="ph-bold ph-check text-brand-blue mt-0.5"></i> Event-specific equipment options</li>
+            </ul>
+            <a href="#quote" class="w-full text-center bg-transparent border border-brand-border group-hover:border-brand-blue text-white px-6 py-3 rounded font-heading font-bold uppercase tracking-wider text-sm transition-colors mt-auto">Request Package Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Benefits Section (Grey) -->
+    <section class="py-24 bg-brand-secondary">
+      <div class="max-w-container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal lg:sticky lg:top-32">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-white mb-6 leading-tight">Bring The Event To Your Location</h2>
+            <p class="text-brand-muted text-lg leading-relaxed mb-6">
+              A mobile stage allows an organization to create a professional outdoor event without relying on a traditional indoor venue. The stage can become the foundation of a custom event package built around the location, audience, schedule, and production requirements.
+            </p>
+            <div class="bg-brand-bg border border-brand-border rounded-lg p-4 inline-block">
+              <p class="text-sm text-brand-muted flex items-start gap-2">
+                <i class="ph-fill ph-info text-brand-blue mt-0.5 shrink-0"></i>
+                Site access and setup conditions must be reviewed prior to confirmation to ensure the property is suitable for safe installation.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl reveal">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brand-bg rounded-lg border border-brand-border flex items-center justify-center shrink-0">
+                  <i class="ph ph-map-pin text-2xl text-brand-blue"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-white">Flexible Location</h3>
+              </div>
+              <p class="text-brand-muted text-sm leading-relaxed pl-16">
+                Create an event at a church property, park, campus, parking area, festival site, or approved outdoor location.
+              </p>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl reveal" style="transition-delay: 100ms;">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brand-bg rounded-lg border border-brand-border flex items-center justify-center shrink-0">
+                  <i class="ph ph-sliders text-2xl text-brand-blue"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-white">Scalable Production</h3>
+              </div>
+              <p class="text-brand-muted text-sm leading-relaxed pl-16">
+                Begin with the stage and add the AV components the event actually requires, from simple audio to full line-array sound and screens.
+              </p>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl reveal" style="transition-delay: 200ms;">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brand-bg rounded-lg border border-brand-border flex items-center justify-center shrink-0">
+                  <i class="ph ph-handshake text-2xl text-brand-blue"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-white">Simplified Coordination</h3>
+              </div>
+              <p class="text-brand-muted text-sm leading-relaxed pl-16">
+                Coordinate staging and available AV equipment through one provider, reducing the stress of managing multiple vendors.
+              </p>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl reveal" style="transition-delay: 300ms;">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brand-bg rounded-lg border border-brand-border flex items-center justify-center shrink-0">
+                  <i class="ph ph-star text-2xl text-brand-blue"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-white">Professional Presentation</h3>
+              </div>
+              <p class="text-brand-muted text-sm leading-relaxed pl-16">
+                Give speakers, musicians, worship teams, and performers a defined, elevated, and weather-protected event platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 bg-brand-bg relative overflow-hidden">
+      <div class="max-w-3xl mx-auto px-6 text-center reveal">
+        <div class="bg-brand-card border border-brand-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-blue to-transparent"></div>
+
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-white mb-6">Mobile Stage Rental Pricing</h2>
+          <p class="text-brand-muted text-lg mb-8 leading-relaxed">
+            Mobile stage rentals typically range from approximately <strong class="text-white font-semibold">$3,000 to $4,000</strong> for the first event day. Additional days may be available at approximately <strong class="text-white font-semibold">$1,000 per day</strong>.
+          </p>
+
+          <div class="text-left mb-8 max-w-xl mx-auto">
+            <p class="text-white font-medium mb-3">Final pricing depends on:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm text-brand-muted">
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Event location & access</div>
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Delivery distance</div>
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Setup/teardown & labor</div>
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Event schedule & duration</div>
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Stage-only vs. AV package</div>
+              <div class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-border mt-0.5"></i> Tech support requirements</div>
+            </div>
+          </div>
+
+          <div class="bg-brand-success/10 border border-brand-success/30 rounded-lg p-4 mb-8 inline-block max-w-2xl mx-auto text-left">
+            <p class="text-sm text-brand-success flex items-start gap-3 leading-relaxed">
+              <i class="ph-fill ph-info mt-0.5 shrink-0 text-lg"></i>
+              <span>These figures are general planning ranges and are not guaranteed quotes. Every event is priced according to its specific equipment and logistical requirements.</span>
+            </p>
+          </div>
+
+          <div>
+            <a href="#quote" class="inline-block bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(22,154,220,0.3)]">
+              Get A Custom Stage Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section (Light) -->
+    <section class="py-24 bg-white">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-brand-bg">How The Stage Rental Process Works</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="relative p-6 bg-brand-grey rounded-xl border border-gray-300 hover:border-brand-blue transition-colors reveal">
+            <div class="text-5xl font-heading font-bold text-gray-300 mb-4">01.</div>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-3">Submit Event Details</h3>
+            <ul class="text-brand-dark text-sm space-y-2">
+              <li>• Event date</li>
+              <li>• Location</li>
+              <li>• Event type</li>
+              <li>• Estimated attendance</li>
+            </ul>
+          </div>
+
+          <div class="relative p-6 bg-brand-grey rounded-xl border border-gray-300 hover:border-brand-blue transition-colors reveal" style="transition-delay: 100ms;">
+            <div class="text-5xl font-heading font-bold text-gray-300 mb-4">02.</div>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-3">Site & Logistics Review</h3>
+            <ul class="text-brand-dark text-sm space-y-2">
+              <li>• Delivery access</li>
+              <li>• Setup area & surface</li>
+              <li>• Event schedule</li>
+              <li>• Power requirements</li>
+            </ul>
+          </div>
+
+          <div class="relative p-6 bg-brand-grey rounded-xl border border-gray-300 hover:border-brand-blue transition-colors reveal" style="transition-delay: 200ms;">
+            <div class="text-5xl font-heading font-bold text-gray-300 mb-4">03.</div>
+            <h3 class="font-heading font-bold text-lg text-brand-bg mb-3">Receive Rental Plan</h3>
+            <p class="text-brand-dark text-sm leading-relaxed">
+              The customer receives a recommended package and custom quote based on the specific event requirements.
+            </p>
+          </div>
+
+          <div class="relative p-6 bg-brand-blue rounded-xl shadow-[0_0_20px_rgba(22,154,220,0.2)] reveal" style="transition-delay: 300ms;">
+            <div class="text-5xl font-heading font-bold text-white/30 mb-4">04.</div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3">Confirm The Event</h3>
+            <p class="text-white/90 text-sm leading-relaxed">
+              Finalize the rental agreement, schedule, setup plan, and event-day responsibilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1540039155732-6761b54f22ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Concert crowd at stage" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-brand-bg/90 backdrop-blur-[2px]"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative z-10 text-center reveal">
+        <p class="text-brand-blue font-heading font-bold tracking-[0.2em] text-sm mb-4">PLAN YOUR NEXT OUTDOOR EVENT</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase text-white mb-6 text-balance">
+          Build Your Event Around A Professional Mobile Stage
+        </h2>
+        <p class="text-brand-muted text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          Tell us about your date, location, audience, and production needs. AvValley will help determine the stage and AV package appropriate for your event.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#quote" class="bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors shadow-[0_0_20px_rgba(22,154,220,0.4)]">
+            Request Stage Availability
+          </a>
+          <a href="tel:4805674215" class="bg-transparent border-2 border-brand-blue text-white hover:bg-brand-blue/10 px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-colors">
+            Call 480-567-4215
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services Section -->
+    <section class="py-24 bg-white border-t border-gray-300">
+      <div class="max-w-container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-heading font-bold text-4xl uppercase text-brand-bg mb-4">Complete Your Event Production</h2>
+          <p class="text-brand-dark text-lg">Pair your stage with professional AV and rental services.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <a href="/rent-projector" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient">
+            <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Projector Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Projector Rentals</h3>
+            </div>
+          </a>
+          <a href="/projection-mapping" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 100ms;">
+            <img src="https://avvalley.com/media/Avalley-projection-mapping-community.webp" alt="Projection Mapping" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Projection Mapping</h3>
+            </div>
+          </a>
+          <a href="/outdoor-movie-rentals" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 200ms;">
+            <img src="https://avvalley.com/media/POOL-PARTY.jpg" alt="Outdoor Movie Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Outdoor Movie Rentals</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote" class="relative py-24 overflow-hidden border-y border-brand-border bg-brand-bg">
+      <QuoteSection contactHeading="Contact Information">
+        <StageRentalForm id="stage-rental-form" />
+      </QuoteSection>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white border-b border-brand-border">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl uppercase text-brand-bg mb-4">Mobile Stage Rental Questions</h2>
+        </div>
+
+        <div class="space-y-4 reveal" id="faq-container">
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What types of events is the mobile stage designed for?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                The stage is designed for festivals, concerts, church services, worship nights, conferences, community events, and school programs looking for a professional outdoor presentation platform.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can I rent the stage without sound or lighting?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. We offer stage-only rentals for customers or AV companies who already have their own production equipment and crew.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Are setup and teardown included?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes, professional delivery, setup, and breakdown by our team are included in your rental plan to ensure structural safety.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can the stage support a live band or worship team?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Absolutely. The 22'x20' deck space provides ample room for full drum kits, backline, musicians, and vocalists.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">What sound and lighting options are available?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                We offer everything from simple PA systems for speaking events up to full line-array audio, subwoofers, stage monitors, wireless mics, and dynamic stage lighting.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can LED walls or side screens be added?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes, we can integrate LED walls for daytime visibility or side projection screens for image magnification, sponsor loops, and presentations.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Can the stage be rented for multiple days?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes, multi-day rentals are common for weekend festivals or recurring community events. Let us know your schedule for accurate pricing.
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-300 bg-brand-grey rounded-lg overflow-hidden faq-item">
+            <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none hover:bg-gray-200 transition-colors" aria-expanded="false">
+              <span class="font-bold text-brand-bg text-sm md:text-base pr-8">Do you rent the stage to other AV companies?</span>
+              <i class="ph-bold ph-caret-down text-brand-blue transition-transform duration-300 transform faq-icon shrink-0"></i>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
+              <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
+                Yes. We frequently provide B2B subrentals for AV and production companies that need dependable staging to supplement their own equipment.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        button.addEventListener('click', () => {
+          const isOpen = content.style.maxHeight;
+          faqItems.forEach(otherItem => {
+            const otherContent = otherItem.querySelector('.faq-content');
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            otherContent.style.maxHeight = null;
+            otherIcon.classList.remove('rotate-180');
+          });
+
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.add('rotate-180');
+          } else {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+    });
+  </script>
+</BaseLayout>

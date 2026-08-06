@@ -1,0 +1,17 @@
+---
+interface Props {
+  variant?: 'light' | 'grey' | 'dark';
+  bordered?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const { variant = 'dark', bordered = true, class: className, id } = Astro.props;
+const sectionClasses = `section section-${variant} ${bordered ? 'section-bordered' : ''} ${className || ''}`.trim();
+---
+
+<section class:list={[sectionClasses]} {id}>
+  <div class="section-container">
+    <slot />
+  </div>
+</section>
