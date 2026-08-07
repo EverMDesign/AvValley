@@ -90,18 +90,65 @@ const { id = 'outdoor-movie-form' } = Astro.props;
 <script define:vars={{ id }}>
   const form = document.getElementById(id);
   const successDiv = document.getElementById(`${id}-success`);
+  const submitBtn = form?.querySelector('button[type="submit"]');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      console.log('Outdoor Movie Form Submitted:', new FormData(form));
-      form.style.display = 'none';
-      successDiv.classList.remove('hidden');
-      setTimeout(() => {
-        form.reset();
-        form.style.display = '';
-        successDiv.classList.add('hidden');
-      }, 3000);
+
+      // Disable button during submission
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'SUBMITTING...';
+      }
+
+      try {
+        // Collect form data
+        const formDataObj = new FormData(form);
+        const data = Object.fromEntries(formDataObj.entries());
+        data.service = 'outdoor-movie';
+
+        // Submit to API endpoint
+        const response = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Show success message
+          form.style.display = 'none';
+          successDiv.classList.remove('hidden');
+
+          // Reset form after delay
+          setTimeout(() => {
+            form.reset();
+            form.style.display = '';
+            successDiv.classList.add('hidden');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Check Screen Availability';
+            }
+          }, 3000);
+        } else {
+          alert(`Error: ${result.error || 'Failed to submit form'}`);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Check Screen Availability';
+          }
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('An error occurred while submitting the form. Please try again.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Check Screen Availability';
+        }
+      }
     });
   }
 </script>

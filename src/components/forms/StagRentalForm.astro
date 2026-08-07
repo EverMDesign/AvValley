@@ -71,10 +71,6 @@ const { id = 'stage-rental-form' } = Astro.props;
       <h4 class="font-heading font-bold text-sm text-brand-blue uppercase tracking-wide border-b border-brand-border pb-2">Stage Requirements</h4>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-brand-muted mb-2">Preferred Stage Dimensions</label>
-          <input type="text" name="stage_dimensions" placeholder="e.g. 22'x20'" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
-        </div>
-        <div>
           <label class="block text-sm font-medium text-brand-muted mb-2">Sound System Needed</label>
           <select name="sound_system" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
             <option value="">Select...</option>
@@ -126,18 +122,65 @@ const { id = 'stage-rental-form' } = Astro.props;
 <script define:vars={{ id }}>
   const form = document.getElementById(id);
   const successDiv = document.getElementById(`${id}-success`);
+  const submitBtn = form?.querySelector('button[type="submit"]');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      console.log('Stage Rental Form Submitted:', new FormData(form));
-      form.style.display = 'none';
-      successDiv.classList.remove('hidden');
-      setTimeout(() => {
-        form.reset();
-        form.style.display = '';
-        successDiv.classList.add('hidden');
-      }, 3000);
+
+      // Disable button during submission
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'SUBMITTING...';
+      }
+
+      try {
+        // Collect form data
+        const formDataObj = new FormData(form);
+        const data = Object.fromEntries(formDataObj.entries());
+        data.service = 'stage-rental';
+
+        // Submit to API endpoint
+        const response = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Show success message
+          form.style.display = 'none';
+          successDiv.classList.remove('hidden');
+
+          // Reset form after delay
+          setTimeout(() => {
+            form.reset();
+            form.style.display = '';
+            successDiv.classList.add('hidden');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'REQUEST STAGE QUOTE';
+            }
+          }, 3000);
+        } else {
+          alert(`Error: ${result.error || 'Failed to submit form'}`);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'REQUEST STAGE QUOTE';
+          }
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('An error occurred while submitting the form. Please try again.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'REQUEST STAGE QUOTE';
+        }
+      }
     });
   }
 </script>

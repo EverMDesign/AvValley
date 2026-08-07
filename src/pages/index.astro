@@ -537,45 +537,50 @@ const faqSchema = getFAQSchema(faqItems);
         </div>
 
         <!-- Quote Form -->
-        <form class="bg-brand-card p-8 md:p-10 rounded-2xl border border-brand-border shadow-2xl reveal space-y-6">
+        <form id="homepage-quote-form" class="bg-brand-card p-8 md:p-10 rounded-2xl border border-brand-border shadow-2xl reveal space-y-6">
+          <!-- Success Message -->
+          <div id="homepage-quote-success" class="hidden bg-brand-success/10 border border-brand-success text-brand-success p-4 rounded-lg mb-6">
+            <p class="font-bold text-sm">Thank you! We'll contact you soon with a custom quote.</p>
+          </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="name" class="block text-sm font-medium text-brand-muted mb-2">Full Name *</label>
-              <input type="text" id="name" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="text" id="name" name="name" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="organization" class="block text-sm font-medium text-brand-muted mb-2">Organization or Company</label>
-              <input type="text" id="organization" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="text" id="organization" name="organization" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-brand-muted mb-2">Email Address *</label>
-              <input type="email" id="email" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="email" id="email" name="email" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="phone" class="block text-sm font-medium text-brand-muted mb-2">Phone Number *</label>
-              <input type="tel" id="phone" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="tel" id="phone" name="phone" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="date" class="block text-sm font-medium text-brand-muted mb-2">Event Date</label>
-              <input type="date" id="date" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors [color-scheme:dark]" />
+              <input type="date" id="date" name="event_date" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors [color-scheme:dark]" />
             </div>
             <div>
               <label for="location" class="block text-sm font-medium text-brand-muted mb-2">Event Location (City/Zip) *</label>
-              <input type="text" id="location" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="text" id="location" name="location" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="type" class="block text-sm font-medium text-brand-muted mb-2">Type of Event</label>
-              <input type="text" id="type" placeholder="e.g. Festival, Church Service" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="text" id="type" name="event_type" placeholder="e.g. Festival, Church Service" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
             <div>
               <label for="attendance" class="block text-sm font-medium text-brand-muted mb-2">Estimated Attendance</label>
-              <input type="number" id="attendance" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
+              <input type="number" id="attendance" name="attendance" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors" />
             </div>
           </div>
 
           <div>
             <label for="services" class="block text-sm font-medium text-brand-muted mb-2">Services Needed *</label>
-            <select id="services" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
+            <select id="services" name="services" required class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors appearance-none">
               <option value="">Select a service...</option>
               <option value="Mobile stage">Mobile stage</option>
               <option value="Sound system">Sound system</option>
@@ -591,12 +596,12 @@ const faqSchema = getFAQSchema(faqItems);
 
           <div>
             <label for="message" class="block text-sm font-medium text-brand-muted mb-2">Additional Details</label>
-            <textarea id="message" rows="4" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors resize-none"></textarea>
+            <textarea id="message" name="message" rows="4" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-white focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-colors resize-none"></textarea>
           </div>
 
           <div class="flex items-start gap-3">
             <div class="flex items-center h-5 mt-1">
-              <input id="consent" type="checkbox" required class="w-4 h-4 bg-brand-bg border-brand-border rounded focus:ring-brand-blue accent-brand-blue" />
+              <input id="consent" name="consent" type="checkbox" required class="w-4 h-4 bg-brand-bg border-brand-border rounded focus:ring-brand-blue accent-brand-blue" />
             </div>
             <label for="consent" class="text-xs text-brand-muted leading-relaxed">
               I consent to AvValley contacting me regarding this quote request. Your information is kept secure according to our privacy policy.
@@ -802,6 +807,71 @@ const faqSchema = getFAQSchema(faqItems);
           }
         });
       });
+
+      // Homepage Quote Form Submission
+      const homepageForm = document.getElementById('homepage-quote-form');
+      const successDiv = document.getElementById('homepage-quote-success');
+      const submitBtn = homepageForm?.querySelector('button[type="submit"]');
+
+      if (homepageForm) {
+        homepageForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          // Disable button during submission
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SUBMITTING...';
+          }
+
+          try {
+            // Collect form data
+            const formDataObj = new FormData(homepageForm);
+            const data = Object.fromEntries(formDataObj.entries());
+            data.service = 'general-inquiry';
+
+            // Submit to API endpoint
+            const response = await fetch('/api/submit-form', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              // Show success message
+              homepageForm.style.display = 'none';
+              successDiv.classList.remove('hidden');
+
+              // Reset form after delay
+              setTimeout(() => {
+                homepageForm.reset();
+                homepageForm.style.display = '';
+                successDiv.classList.add('hidden');
+                if (submitBtn) {
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = 'Request A Quote';
+                }
+              }, 3000);
+            } else {
+              alert(`Error: ${result.error || 'Failed to submit form'}`);
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Request A Quote';
+              }
+            }
+          } catch (error) {
+            console.error('Form submission error:', error);
+            alert('An error occurred while submitting the form. Please try again.');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Request A Quote';
+            }
+          }
+        });
+      }
     });
   </script>
 </BaseLayout>
