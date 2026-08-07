@@ -381,26 +381,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="font-heading font-bold text-4xl uppercase text-brand-bg">From Inquiry to Event Day</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           <div class="relative p-6 reveal">
             <div class="text-6xl font-heading font-bold text-gray-300 mb-4">01.</div>
             <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Tell Us About the Event</h3>
             <p class="text-brand-dark text-sm leading-relaxed">Provide the event date, location, audience size, schedule, and equipment needs.</p>
-            <div class="hidden lg:block absolute top-12 left-2/3 w-full h-px bg-gray-300"></div>
+          </div>
+
+          <div class="hidden lg:flex absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-gray-300 pointer-events-none">
+            <i class="ph-bold ph-arrow-right text-3xl"></i>
           </div>
 
           <div class="relative p-6 reveal" style="transition-delay: 100ms;">
             <div class="text-6xl font-heading font-bold text-gray-300 mb-4">02.</div>
             <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Build the Rental Plan</h3>
             <p class="text-brand-dark text-sm leading-relaxed">AvValley recommends the stage and AV components appropriate for the event.</p>
-            <div class="hidden lg:block absolute top-12 left-2/3 w-full h-px bg-gray-300"></div>
+          </div>
+
+          <div class="hidden lg:flex absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-300 pointer-events-none">
+            <i class="ph-bold ph-arrow-right text-3xl"></i>
           </div>
 
           <div class="relative p-6 reveal" style="transition-delay: 200ms;">
             <div class="text-6xl font-heading font-bold text-gray-300 mb-4">03.</div>
             <h3 class="font-heading font-bold text-xl text-brand-bg mb-3">Confirm Logistics</h3>
             <p class="text-brand-dark text-sm leading-relaxed">Finalize access, delivery, setup, power, labor, and event-day requirements.</p>
-            <div class="hidden lg:block absolute top-12 left-2/3 w-full h-px bg-gray-300"></div>
+          </div>
+
+          <div class="hidden lg:flex absolute top-1/3 left-3/4 transform -translate-x-1/2 -translate-y-1/2 text-gray-300 pointer-events-none">
+            <i class="ph-bold ph-arrow-right text-3xl"></i>
           </div>
 
           <div class="relative p-6 reveal" style="transition-delay: 300ms;">
