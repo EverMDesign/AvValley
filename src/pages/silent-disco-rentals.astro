@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SilentDiscoForm from '../components/forms/SilentDiscoForm.astro';
 import QuoteSection from '../components/QuoteSection.astro';
+import { getSilentDiscoRentalSchema } from '../lib/schemas';
+
+const discoSchema = getSilentDiscoRentalSchema();
 ---
 
 <BaseLayout
@@ -9,6 +12,9 @@ import QuoteSection from '../components/QuoteSection.astro';
   description="Rent wireless silent-disco headphones for parties, weddings, schools, churches, festivals, corporate events, and outdoor experiences. Check availability with AvValley."
 >
   <main class="flex-grow pt-20">
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(discoSchema)} />
+
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">

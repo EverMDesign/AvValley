@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectorPurchaseForm from '../components/forms/ProjectorPurchaseForm.astro';
 import QuoteSection from '../components/QuoteSection.astro';
+import { getProjectorPurchaseSchema } from '../lib/schemas';
+
+const purchaseSchema = getProjectorPurchaseSchema();
 ---
 
 <BaseLayout
@@ -9,6 +12,9 @@ import QuoteSection from '../components/QuoteSection.astro';
   description="Purchase high-performance Christie and Barco projectors for outdoor events, churches, corporate venues, and production companies. Professional-grade equipment with warranty and support."
 >
   <main class="flex-grow pt-12">
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(purchaseSchema)} />
+
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">

@@ -1,9 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getHomepageSchema, getOrganizationSchema, getFAQSchema } from '../lib/schemas';
+
+const homepageSchema = getHomepageSchema();
+const orgSchema = getOrganizationSchema();
+
+const faqItems = [
+  {
+    question: "What types of events do you support?",
+    answer: "We support a wide range of outdoor events including church services, worship nights, music festivals, concerts, corporate conferences, community gatherings, school events, outdoor movie nights, and more."
+  },
+  {
+    question: "Can I rent the stage without a complete AV package?",
+    answer: "Yes. You can rent just the mobile stage by itself, or you can build a custom package adding sound, lighting, or screens as needed for your specific event."
+  },
+  {
+    question: "Do you provide delivery, setup, and teardown?",
+    answer: "Absolutely. All of our rentals include professional delivery, setup, and teardown by our experienced crew to ensure everything is safe and ready for your event."
+  },
+  {
+    question: "What information do you need to prepare a quote?",
+    answer: "To provide an accurate quote, we need the event date, location, expected attendance, type of event, and an idea of what services you are interested in (stage only, full AV, etc.). Access details for the venue are also helpful."
+  },
+  {
+    question: "Can you support live bands and worship teams?",
+    answer: "Yes. We offer \"Band-Ready\" production packages that include line-array speakers, subwoofers, stage monitors, digital mixing consoles, microphones, and dynamic lighting suitable for full live bands."
+  },
+  {
+    question: "Do you provide LED walls or outdoor movie screens?",
+    answer: "Yes. We supply LED walls for daytime visibility or outdoor projection screens for evening movie nights. These can be integrated with the stage or set up independently."
+  },
+  {
+    question: "Can other AV companies subrent your equipment?",
+    answer: "Yes, we frequently work B2B. Production companies and AV providers can subrent our stages, sound systems, lighting, and screens to supplement their own inventory for client events."
+  },
+  {
+    question: "What areas do you serve?",
+    answer: "We primarily serve Phoenix, Mesa, Tempe, Chandler, Gilbert, Scottsdale, San Tan Valley, Litchfield Park, and all surrounding Arizona communities. We specialize in outdoor event rentals throughout Maricopa County and can accommodate events across Arizona for multi-day productions."
+  },
+  {
+    question: "How far in advance should I reserve the stage?",
+    answer: "We recommend booking as soon as your event date is confirmed, especially for busy seasons (Spring and Fall). A minimum of 30-60 days is ideal, but we can sometimes accommodate shorter notices based on availability."
+  },
+  {
+    question: "What affects the final rental price?",
+    answer: "Pricing is influenced by the specific equipment requested (stage size, amount of audio/lighting), duration of the rental, travel distance, labor requirements for setup/teardown, and any difficult venue access issues."
+  }
+];
+
+const faqSchema = getFAQSchema(faqItems);
 ---
 
 <BaseLayout>
   <main class="flex-grow" style="margin-top: 80px;">
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(homepageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
     <!-- Hero Section -->
     <section class="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
       <div class="absolute inset-0 z-0">
@@ -18,7 +72,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Bring The Venue<br/>To Your Location.
           </h1>
           <p class="text-brand-muted text-lg md:text-xl max-w-3xl mx-auto mb-10 text-balance leading-relaxed">
-            Host a professional outdoor event with stage, sound, lighting, screens, microphones, and event-ready AV support—all coordinated through one experienced provider.
+            Host professional outdoor events in Phoenix, Scottsdale, Mesa, and throughout Arizona with stage rentals, sound systems, LED walls, and event-ready AV support—all coordinated through one experienced provider.
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a href="#quote" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-hover text-white px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(22,154,220,0.4)] hover:shadow-[0_0_30px_rgba(26,175,232,0.6)] hover:-translate-y-1">
@@ -28,10 +82,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               Explore Rental Options
             </a>
           </div>
-          <p class="text-sm text-brand-muted flex items-center justify-center gap-2 w-3/4 mx-auto">
-            <i class="ph-fill ph-map-pin text-brand-blue shrink-0"></i>
-            Serving Phoenix, Mesa, San Tan Valley, and surrounding Arizona communities.
-          </p>
+          <div class="w-full flex flex-col items-center gap-4">
+            <p class="text-sm text-brand-muted flex items-center justify-center gap-2">
+              <i class="ph-fill ph-map-pin text-brand-blue shrink-0"></i>
+              Serving Arizona Communities:
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 max-w-4xl">
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Phoenix</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Mesa</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Tempe</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Chandler</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Gilbert</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Scottsdale</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">San Tan Valley</span>
+              <span class="inline-block bg-brand-blue/20 border border-brand-blue text-brand-blue px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide hover:bg-brand-blue/30 transition-colors">Litchfield Park</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -189,7 +255,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="max-w-container mx-auto px-6 relative z-10">
         <div class="text-center mb-16 reveal">
-          <h2 class="font-heading font-bold text-4xl uppercase text-white mb-4">Built For Events of Every Scale</h2>
+          <h2 class="font-heading font-bold text-4xl uppercase text-white mb-4">Built For Arizona Events of Every Scale</h2>
           <div class="w-24 h-1 bg-brand-blue mx-auto rounded"></div>
         </div>
 
@@ -200,7 +266,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <i class="ph ph-church text-2xl text-brand-blue"></i>
             </div>
             <h3 class="font-heading font-bold text-xl text-white mb-3">Churches & Ministries</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Elevate worship nights, baptisms, and outdoor services with stages, clear audio, and readable LED screens designed for congregational engagement.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Elevate worship nights, baptisms, and outdoor services for churches in Phoenix, Tempe, Chandler, and throughout the Phoenix metro area with professional stages, clear audio, and readable LED screens designed for congregational engagement.</p>
           </div>
 
           <!-- Use Case 2 -->
@@ -209,7 +275,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <i class="ph ph-music-notes text-2xl text-brand-blue"></i>
             </div>
             <h3 class="font-heading font-bold text-xl text-white mb-3">Festivals & Concerts</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Deliver high-impact live music experiences with band-ready stage setups, line-array sound systems, and dynamic stage lighting.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Deliver high-impact live music experiences across Phoenix, Scottsdale, Mesa, and Arizona with band-ready stage setups, line-array sound systems, and dynamic stage lighting.</p>
           </div>
 
           <!-- Use Case 3 -->
@@ -218,7 +284,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <i class="ph ph-microphone-stage text-2xl text-brand-blue"></i>
             </div>
             <h3 class="font-heading font-bold text-xl text-white mb-3">Conferences & Speakers</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Ensure crystal-clear communication with professional staging, podiums, specialized microphones, and large side screens for presentations.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Ensure crystal-clear communication for corporate events in Phoenix, Chandler, Gilbert, and the greater Arizona area with professional staging, podiums, specialized microphones, and large side screens for presentations.</p>
           </div>
 
           <!-- Use Case 4 -->
@@ -227,7 +293,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <i class="ph ph-users-three text-2xl text-brand-blue"></i>
             </div>
             <h3 class="font-heading font-bold text-xl text-white mb-3">Cities & Community Events</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Create central gathering points for municipal events, holiday celebrations, and park gatherings with robust, weather-ready staging.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Create central gathering points for municipal events, holiday celebrations, and park gatherings across Phoenix, Mesa, Tempe, and throughout Arizona with robust, weather-ready staging.</p>
           </div>
 
           <!-- Use Case 5 -->
@@ -236,7 +302,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <i class="ph ph-graduation-cap text-2xl text-brand-blue"></i>
             </div>
             <h3 class="font-heading font-bold text-xl text-white mb-3">Schools & Nonprofits</h3>
-            <p class="text-brand-muted text-sm leading-relaxed">Host graduation ceremonies, fundraisers, and outdoor movie nights with scalable packages that fit institutional budgets and requirements.</p>
+            <p class="text-brand-muted text-sm leading-relaxed">Host graduation ceremonies, fundraisers, and outdoor movie nights for Arizona schools and nonprofits in Phoenix, Gilbert, Chandler, and surrounding areas with scalable packages that fit institutional budgets and requirements.</p>
           </div>
 
           <!-- Use Case 6 -->
@@ -651,7 +717,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </button>
             <div class="max-h-0 overflow-hidden transition-all duration-300 faq-content">
               <div class="px-6 pb-5 text-brand-dark text-sm leading-relaxed border-t border-gray-300 pt-4 mt-1">
-                We primarily serve Phoenix, Mesa, San Tan Valley, and surrounding Arizona communities. We may travel further for specific multi-day events or larger production needs.
+                We primarily serve Phoenix, Mesa, Tempe, Chandler, Gilbert, Scottsdale, San Tan Valley, Litchfield Park, and all surrounding Arizona communities. We specialize in outdoor event rentals throughout Maricopa County and can accommodate events across Arizona for multi-day productions.
               </div>
             </div>
           </div>

@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectionMappingForm from '../components/forms/ProjectionMappingForm.astro';
 import QuoteSection from '../components/QuoteSection.astro';
+import { getProjectionMappingSchema } from '../lib/schemas';
+
+const mappingSchema = getProjectionMappingSchema();
 ---
 
 <BaseLayout
@@ -13,6 +16,9 @@ import QuoteSection from '../components/QuoteSection.astro';
   </header>
 
   <main class="flex-grow pt-20">
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(mappingSchema)} />
+
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center pt-12 overflow-hidden">
       <div class="absolute inset-0 z-0">

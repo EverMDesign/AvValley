@@ -1,0 +1,261 @@
+// Central schema definitions for AvValley
+// Each function returns a specific JSON-LD schema for a page
+
+export function getOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://avvalley.com",
+    "name": "AvValley",
+    "image": "https://avvalley.com/images/AVValley-Logo.png",
+    "description": "Professional outdoor stage and AV rentals for events, churches, festivals, conferences, and production companies in Arizona.",
+    "url": "https://avvalley.com",
+    "telephone": "480-567-4215",
+    "email": "info@avvalley.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Phoenix"
+      },
+      {
+        "@type": "City",
+        "name": "Mesa"
+      },
+      {
+        "@type": "City",
+        "name": "San Tan Valley"
+      }
+    ],
+    "serviceType": [
+      "Stage Rental",
+      "AV Equipment Rental",
+      "Projector Rental",
+      "LED Wall Rental",
+      "Silent Disco Rental",
+      "Event Equipment Rental"
+    ]
+  };
+}
+
+export function getMobileStageRentalSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mobile Stage Rental",
+    "description": "22' × 20' professional mobile stage rental for outdoor events, festivals, churches, conferences, and productions in Arizona.",
+    "url": "https://avvalley.com/mobile-stage-rental",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    },
+    "serviceType": "Equipment Rental",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    },
+    "priceRange": "$3000 - $4000+",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "price": "3000"
+    }
+  };
+}
+
+export function getProjectorRentalSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Projector Rental",
+    "description": "Professional Christie and Barco projector rentals for outdoor events, churches, conferences, and production companies in Arizona.",
+    "url": "https://avvalley.com/rent-projector",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    },
+    "serviceType": "Equipment Rental",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD"
+    }
+  };
+}
+
+export function getProjectorPurchaseSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Professional Projectors for Sale",
+    "description": "Buy Christie and Barco professional projectors for outdoor events, churches, venues, and production companies.",
+    "url": "https://avvalley.com/purchase-projector",
+    "brand": [
+      {
+        "@type": "Brand",
+        "name": "Christie"
+      },
+      {
+        "@type": "Brand",
+        "name": "Barco"
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Christie Roadster HD20K-J",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "price": "Contact for Pricing"
+      },
+      {
+        "@type": "Offer",
+        "name": "Christie HD14K-M",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "price": "Contact for Pricing"
+      },
+      {
+        "@type": "Offer",
+        "name": "Barco HDX-W20 FLEX",
+        "availability": "https://schema.org/PreOrder",
+        "priceCurrency": "USD",
+        "price": "Contact for Pricing"
+      }
+    ],
+    "seller": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    }
+  };
+}
+
+export function getProjectionMappingSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Projection Mapping Services",
+    "description": "Professional projection mapping services for events, installations, and architectural projection in Arizona.",
+    "url": "https://avvalley.com/projection-mapping",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    },
+    "serviceType": "Audio Visual Service",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    }
+  };
+}
+
+export function getSilentDiscoRentalSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Silent Disco Rental",
+    "description": "Wireless silent disco headphone rentals for parties, weddings, schools, churches, festivals, corporate events, and outdoor experiences in Arizona.",
+    "url": "https://avvalley.com/silent-disco-rentals",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    },
+    "serviceType": "Equipment Rental",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    },
+    "priceRange": "$5/headphone per day",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "price": "5"
+    }
+  };
+}
+
+export function getOutdoorMovieRentalSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Outdoor Movie Screen Rental",
+    "description": "Professional air screen and projection rentals for outdoor movie nights, backyard events, and community gatherings in Arizona.",
+    "url": "https://avvalley.com/outdoor-movie-rentals",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    },
+    "serviceType": "Equipment Rental",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Backyard Screen (Small) - 24' x 14'",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Giant Screen (Large) - 40' x 22'",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD"
+      }
+    ]
+  };
+}
+
+export function getHomepageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AvValley",
+    "url": "https://avvalley.com",
+    "description": "Professional outdoor stage and AV rentals for events, churches, festivals, conferences, and production companies.",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com",
+      "name": "AvValley"
+    }
+  };
+}
+
+// FAQ Schema - Generic function that accepts Q&A pairs
+export function getFAQSchema(faqItems: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+}

@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StageRentalForm from '../components/forms/StageRentalForm.astro';
 import QuoteSection from '../components/QuoteSection.astro';
+import { getMobileStageRentalSchema } from '../lib/schemas';
+
+const stageSchema = getMobileStageRentalSchema();
 ---
 
 <BaseLayout
@@ -11,6 +14,9 @@ import QuoteSection from '../components/QuoteSection.astro';
 >
 
   <main class="flex-grow pt-12">
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(stageSchema)} />
+
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
