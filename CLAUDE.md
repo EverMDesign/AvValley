@@ -136,6 +136,34 @@ npm run preview
 
 ---
 
+## GoHighLevel Integration
+
+**For complete API integration guide, see:** `../Docs/leadconnector-api.md` (root Websites/Docs folder)
+
+This guide covers:
+- Authentication and required headers
+- Field types and payload formats
+- Common issues and solutions
+- Best practices for future scripts
+
+### JS Scripts (AvValley-specific)
+
+Scripts in `js/` folder for AvValley CRM integration:
+
+- **`create-avvalley-fields.js`** — Creates 38 service-specific custom fields
+- **`cleanup-test-fields.js`** — Removes test fields from EverReach
+
+### Environment Setup
+
+Create `.env` (copy from `.env.example`):
+```
+PIT_TOKEN=pit-xxxxxxxxx
+LOCATION_ID=location-id
+GHL_API_BASE=https://services.leadconnectorhq.com
+```
+
+---
+
 ## Contact & Brand Info
 
 - **Phone:** 480-567-4215

@@ -23,6 +23,3 @@ build/
 
 # Astro
 .astro/
-
-# GoHighLevel
-*gohighlevel*.js
