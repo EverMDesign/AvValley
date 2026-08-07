@@ -29,7 +29,27 @@ export function getOrganizationSchema() {
       },
       {
         "@type": "City",
+        "name": "Tempe"
+      },
+      {
+        "@type": "City",
+        "name": "Chandler"
+      },
+      {
+        "@type": "City",
+        "name": "Gilbert"
+      },
+      {
+        "@type": "City",
+        "name": "Scottsdale"
+      },
+      {
+        "@type": "City",
         "name": "San Tan Valley"
+      },
+      {
+        "@type": "City",
+        "name": "Litchfield Park"
       }
     ],
     "serviceType": [
@@ -39,6 +59,38 @@ export function getOrganizationSchema() {
       "LED Wall Rental",
       "Silent Disco Rental",
       "Event Equipment Rental"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Service",
+        "name": "Mobile Stage Rental",
+        "url": "https://avvalley.com/mobile-stage-rental"
+      },
+      {
+        "@type": "Service",
+        "name": "Projector Rental",
+        "url": "https://avvalley.com/rent-projector"
+      },
+      {
+        "@type": "Service",
+        "name": "Projector Purchase",
+        "url": "https://avvalley.com/purchase-projector"
+      },
+      {
+        "@type": "Service",
+        "name": "Projection Mapping",
+        "url": "https://avvalley.com/projection-mapping"
+      },
+      {
+        "@type": "Service",
+        "name": "Silent Disco Rental",
+        "url": "https://avvalley.com/silent-disco-rentals"
+      },
+      {
+        "@type": "Service",
+        "name": "Outdoor Movie Rental",
+        "url": "https://avvalley.com/outdoor-movie-rentals"
+      }
     ]
   };
 }
@@ -52,8 +104,7 @@ export function getMobileStageRentalSchema() {
     "url": "https://avvalley.com/mobile-stage-rental",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
+      "@id": "https://avvalley.com"
     },
     "serviceType": "Equipment Rental",
     "areaServed": {
@@ -80,8 +131,7 @@ export function getProjectorRentalSchema() {
     "url": "https://avvalley.com/rent-projector",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
+      "@id": "https://avvalley.com"
     },
     "serviceType": "Equipment Rental",
     "areaServed": {
@@ -100,20 +150,20 @@ export function getProjectorRentalSchema() {
 export function getProjectorPurchaseSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Professional Projectors for Sale",
+    "@type": "Service",
+    "name": "Projector Purchase",
     "description": "Buy Christie and Barco professional projectors for outdoor events, churches, venues, and production companies.",
     "url": "https://avvalley.com/purchase-projector",
-    "brand": [
-      {
-        "@type": "Brand",
-        "name": "Christie"
-      },
-      {
-        "@type": "Brand",
-        "name": "Barco"
-      }
-    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://avvalley.com"
+    },
+    "serviceType": "Equipment Sales",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "US",
+      "addressRegion": "AZ"
+    },
     "offers": [
       {
         "@type": "Offer",
@@ -136,12 +186,7 @@ export function getProjectorPurchaseSchema() {
         "priceCurrency": "USD",
         "price": "Contact for Pricing"
       }
-    ],
-    "seller": {
-      "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
-    }
+    ]
   };
 }
 
@@ -154,8 +199,7 @@ export function getProjectionMappingSchema() {
     "url": "https://avvalley.com/projection-mapping",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
+      "@id": "https://avvalley.com"
     },
     "serviceType": "Audio Visual Service",
     "areaServed": {
@@ -175,8 +219,7 @@ export function getSilentDiscoRentalSchema() {
     "url": "https://avvalley.com/silent-disco-rentals",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
+      "@id": "https://avvalley.com"
     },
     "serviceType": "Equipment Rental",
     "areaServed": {
@@ -203,8 +246,7 @@ export function getOutdoorMovieRentalSchema() {
     "url": "https://avvalley.com/outdoor-movie-rentals",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com",
-      "name": "AvValley"
+      "@id": "https://avvalley.com"
     },
     "serviceType": "Equipment Rental",
     "areaServed": {

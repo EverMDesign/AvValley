@@ -210,40 +210,40 @@ const faqSchema = getFAQSchema(faqItems);
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Package 1: Stage and Sound -->
-          <div class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer">
+          <a href="/mobile-stage-rental" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline">
             <img src="https://avvalley.com/media/stage-banner.jpg" alt="Stage and Sound" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
-              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Stage + Sound Packages</h3>
-              <p class="text-brand-muted mb-4 line-clamp-2">Professional stage, speakers, mixer, microphones, and optional podium support.</p>
+              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Mobile Stage Rental</h3>
+              <p class="text-brand-muted mb-4 line-clamp-2">Professional 22' × 20' mobile stage with sound, lighting, and equipment packages for outdoor events.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Package 2: LED Walls -->
-          <div id="led-walls" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer" style="transition-delay: 100ms;">
+          <a href="/projection-mapping" id="led-walls" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 100ms;">
             <img src="https://avvalley.com/media/Avalley-projection-mapping-concert.webp" alt="LED Walls" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
-              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">LED Walls & Side Screens</h3>
-              <p class="text-brand-muted mb-4 line-clamp-2">Improve visibility and engagement with presentation screens, live feeds, lyrics, branding, and event visuals.</p>
+              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Projection Mapping & LED Walls</h3>
+              <p class="text-brand-muted mb-4 line-clamp-2">Professional projection mapping and LED displays for dynamic visuals, presentations, branding, and immersive event experiences.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Package 3: Outdoor Movies -->
-          <div id="outdoor-movies" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer" style="transition-delay: 200ms;">
+          <a href="/outdoor-movie-rentals" id="outdoor-movies" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 200ms;">
             <img src="https://avvalley.com/media/POOL-PARTY.jpg" alt="Outdoor Movies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
-              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Outdoor Movie Packages</h3>
+              <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Air Screen Movie Packages</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Professional air screens and projection for outdoor movie nights, backyard events, and community gatherings.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Package 4: Silent Disco Party -->
-          <div class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer" style="transition-delay: 300ms;">
+          <a href="/silent-disco-rentals" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 300ms;">
             <img src="https://avvalley.com/media/Avvalley-silent-disco-feastival.webp" alt="Silent Disco Party" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
               <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Silent Disco Party</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Wireless headphone systems for unique entertainment at weddings, corporate events, festivals, and private parties.</p>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -754,6 +754,7 @@ const faqSchema = getFAQSchema(faqItems);
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Reveal animation observer
       const revealElements = document.querySelectorAll('.reveal');
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -769,6 +770,38 @@ const faqSchema = getFAQSchema(faqItems);
       });
 
       revealElements.forEach(el => revealObserver.observe(el));
+
+      // FAQ accordion functionality
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        button.addEventListener('click', () => {
+          const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+          // Close all other FAQ items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              const otherContent = otherItem.querySelector('.faq-content');
+              const otherIcon = otherItem.querySelector('.faq-icon');
+              otherContent.style.maxHeight = '0px';
+              otherIcon.classList.remove('rotate-180');
+            }
+          });
+
+          // Toggle current item
+          if (isOpen) {
+            content.style.maxHeight = '0px';
+            icon.classList.remove('rotate-180');
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
     });
   </script>
 </BaseLayout>
