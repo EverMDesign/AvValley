@@ -197,7 +197,6 @@ export const POST: APIRoute = async ({ request }) => {
       lastName,
       email: formData.email,
       phone: formData.phone,
-      tags: [serviceType.replace('-', ' ').toUpperCase()],
       customFields,
     });
 
