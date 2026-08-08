@@ -6,5 +6,7 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://avvalley.com',
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: vercel({
+    nodeVersion: '20.x',
+  }),
 });
