@@ -4,7 +4,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://avvalley.com',
+  site: 'https://www.avvalley.com',
   output: 'hybrid',
   adapter: vercel(),
 });

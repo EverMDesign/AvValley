@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://avvalley.com/sitemap.xml
+Sitemap: https://www.avvalley.com/sitemap.xml
