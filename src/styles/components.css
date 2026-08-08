@@ -16,10 +16,6 @@
     @apply hover:border-brand-blue;
   }
 
-  .card-group {
-    @apply group;
-  }
-
   /* ===== BUTTONS ===== */
   .btn {
     @apply px-8 py-4 rounded font-heading font-bold uppercase tracking-wider transition-all text-center;

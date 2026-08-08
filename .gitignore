@@ -23,3 +23,5 @@ build/
 
 # Astro
 .astro/
+.vercel/
+dist/
