@@ -1,7 +1,11 @@
 ---
+import { MEDIA_URL } from '../lib/constants';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { MEDIA_URL } from '../lib/constants';
 import ProjectorRentalForm from '../components/forms/ProjectorRentalForm.astro';
+import { MEDIA_URL } from '../lib/constants';
 import QuoteSection from '../components/QuoteSection.astro';
+import { MEDIA_URL } from '../lib/constants';
 import { getProjectorRentalSchema } from '../lib/schemas';
 
 const projectorSchema = getProjectorRentalSchema();
@@ -62,7 +66,7 @@ const projectorSchema = getProjectorRentalSchema();
           <!-- Christie Roadster HD20K-J -->
           <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 flex flex-col reveal group hover:border-brand-blue transition-colors">
             <div class="w-full h-48 bg-brand-ag border border-brand-border rounded-lg mb-6 flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-              <img src="https://avvalley.com/media/Christie Roadster HD20K-J.webp" alt="Christie Roadster HD20K-J projector" class="w-full h-full object-cover" />
+              <img src={`${MEDIA_URL}/Christie Roadster HD20K-J.webp`} alt="Christie Roadster HD20K-J projector" class="w-full h-full object-cover" />
               <span class="absolute top-2 right-2 bg-brand-secondary text-brand-muted text-xs px-2 py-1 rounded border border-brand-border">Rental Item</span>
             </div>
             <div class="flex-grow">
@@ -96,7 +100,7 @@ const projectorSchema = getProjectorRentalSchema();
           <!-- Barco HDX-W20 FLEX -->
           <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
             <div class="w-full h-48 bg-brand-bg border border-brand-border rounded-lg mb-6 flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-              <img src="https://avvalley.com/media/Barco HDX-W20 FLEX WUXGA DLP.webp" alt="Barco HDX-W20 FLEX projector" class="w-full h-full object-cover" />
+              <img src={`${MEDIA_URL}/Barco HDX-W20 FLEX WUXGA DLP.webp`} alt="Barco HDX-W20 FLEX projector" class="w-full h-full object-cover" />
               <span class="absolute top-2 right-2 bg-brand-secondary text-brand-muted text-xs px-2 py-1 rounded border border-brand-border">Rental Item</span>
             </div>
             <div class="flex-grow">
@@ -130,7 +134,7 @@ const projectorSchema = getProjectorRentalSchema();
           <!-- Christie HD14K-M -->
           <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 200ms;">
             <div class="w-full h-48 bg-brand-bg border border-brand-border rounded-lg mb-6 flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-              <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Christie HD14K-M projector" class="w-full h-full object-cover" />
+              <img src={`${MEDIA_URL}/Christie HD14K-M 12,500 Lumen.webp`} alt="Christie HD14K-M projector" class="w-full h-full object-cover" />
               <span class="absolute top-2 right-2 bg-brand-secondary text-brand-muted text-xs px-2 py-1 rounded border border-brand-border">Rental Item</span>
             </div>
             <div class="flex-grow">
@@ -164,7 +168,7 @@ const projectorSchema = getProjectorRentalSchema();
           <!-- Barco RLM-W12 -->
           <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 flex flex-col reveal group hover:border-brand-blue transition-colors">
             <div class="w-full h-48 bg-brand-bg border border-brand-border rounded-lg mb-6 flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-              <img src="https://avvalley.com/media/Barco RLM-W12 11,500 Lumens.webp" alt="Barco RLM-W12 projector" class="w-full h-full object-cover" />
+              <img src={`${MEDIA_URL}/Barco RLM-W12 11,500 Lumens.webp`} alt="Barco RLM-W12 projector" class="w-full h-full object-cover" />
               <span class="absolute top-2 right-2 bg-brand-secondary text-brand-muted text-xs px-2 py-1 rounded border border-brand-border">Rental Item</span>
             </div>
             <div class="flex-grow">
@@ -198,7 +202,7 @@ const projectorSchema = getProjectorRentalSchema();
           <!-- Barco RLM-W8 -->
           <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 flex flex-col reveal group hover:border-brand-blue transition-colors" style="transition-delay: 100ms;">
             <div class="w-full h-48 bg-brand-bg border border-brand-border rounded-lg mb-6 flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-              <img src="https://avvalley.com/media/Barco RLM-W8 WUXGA 8000 Lumen.webp" alt="Barco RLM-W8 projector" class="w-full h-full object-cover" />
+              <img src={`${MEDIA_URL}/Barco RLM-W8 WUXGA 8000 Lumen.webp`} alt="Barco RLM-W8 projector" class="w-full h-full object-cover" />
               <span class="absolute top-2 right-2 bg-brand-secondary text-brand-muted text-xs px-2 py-1 rounded border border-brand-border">Rental Item</span>
             </div>
             <div class="flex-grow">
@@ -243,7 +247,7 @@ const projectorSchema = getProjectorRentalSchema();
       <div class="max-w-container mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl reveal group">
-            <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Christie HD14K-M 12,500 Lumen projector" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
+            <img src={`${MEDIA_URL}/Christie HD14K-M 12,500 Lumen.webp`} alt="Christie HD14K-M 12,500 Lumen projector" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
           </div>
 
           <div class="reveal" style="transition-delay: 200ms;">
@@ -337,19 +341,19 @@ const projectorSchema = getProjectorRentalSchema();
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <a href="/mobile-stage-rental" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient">
-            <img src="https://avvalley.com/media/stage-banner.jpg" alt="Mobile Stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/stage-banner.jpg`} alt="Mobile Stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Mobile Stage Rental</h3>
             </div>
           </a>
           <a href="/projection-mapping" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 100ms;">
-            <img src="https://avvalley.com/media/Avalley-projection-mapping-community.webp" alt="Projection Mapping" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/Avalley-projection-mapping-community.webp`} alt="Projection Mapping" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Projection Mapping</h3>
             </div>
           </a>
           <a href="/silent-disco-rentals" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 200ms;">
-            <img src="https://avvalley.com/media/Avvalley-silen-disco-corporate.webp" alt="Silent Disco" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/Avvalley-silen-disco-corporate.webp`} alt="Silent Disco" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Silent Disco Rentals</h3>
             </div>

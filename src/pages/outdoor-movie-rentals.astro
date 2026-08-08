@@ -1,7 +1,11 @@
 ---
+import { MEDIA_URL } from '../lib/constants';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { MEDIA_URL } from '../lib/constants';
 import OutdoorMovieForm from '../components/forms/OutdoorMovieForm.astro';
+import { MEDIA_URL } from '../lib/constants';
 import QuoteSection from '../components/QuoteSection.astro';
+import { MEDIA_URL } from '../lib/constants';
 import { getOutdoorMovieRentalSchema } from '../lib/schemas';
 
 const movieSchema = getOutdoorMovieRentalSchema();
@@ -18,7 +22,7 @@ const movieSchema = getOutdoorMovieRentalSchema();
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center pt-12 overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img src="https://avvalley.com/media/Air-Screen-For-Rent.jpg" alt="Outdoor movie screening at night with audience" class="w-full h-full object-cover object-center" />
+        <img src={`${MEDIA_URL}/Air-Screen-For-Rent.jpg`} alt="Outdoor movie screening at night with audience" class="w-full h-full object-cover object-center" />
         <div class="absolute inset-0 bg-brand-bg/80"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent"></div>
       </div>
@@ -52,7 +56,7 @@ const movieSchema = getOutdoorMovieRentalSchema();
       <div class="max-w-container mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl reveal group">
-            <img src="https://avvalley.com/media/POOL-PARTY.jpg" alt="Large inflatable outdoor movie screen setup" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
+            <img src={`${MEDIA_URL}/POOL-PARTY.jpg`} alt="Large inflatable outdoor movie screen setup" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-brand-bg/30 mix-blend-multiply pointer-events-none"></div>
           </div>
 
@@ -159,19 +163,19 @@ const movieSchema = getOutdoorMovieRentalSchema();
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <a href="/rent-projector" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient">
-            <img src="https://avvalley.com/media/Christie HD14K-M 12,500 Lumen.webp" alt="Projector Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/Christie HD14K-M 12,500 Lumen.webp`} alt="Projector Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Projector Rentals</h3>
             </div>
           </a>
           <a href="/mobile-stage-rental" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 100ms;">
-            <img src="https://avvalley.com/media/stage-banner.jpg" alt="Mobile Stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/stage-banner.jpg`} alt="Mobile Stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Mobile Stage Rental</h3>
             </div>
           </a>
           <a href="/silent-disco-rentals" class="relative h-48 rounded-xl overflow-hidden group border border-brand-border reveal card-gradient" style="transition-delay: 200ms;">
-            <img src="https://avvalley.com/media/Avvalley-silen-disco-corporate.webp" alt="Silent Disco" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src={`${MEDIA_URL}/Avvalley-silen-disco-corporate.webp`} alt="Silent Disco" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-6">
               <h3 class="font-heading font-bold text-xl text-white group-hover:text-brand-blue transition-colors">Silent Disco Rentals</h3>
             </div>
