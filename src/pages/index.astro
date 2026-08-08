@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getHomepageSchema, getOrganizationSchema, getFAQSchema } from '../lib/schemas';
-import { MEDIA_URL } from '../lib/constants';
 
 const homepageSchema = getHomepageSchema();
 const orgSchema = getOrganizationSchema();
@@ -62,7 +61,7 @@ const faqSchema = getFAQSchema(faqItems);
     <!-- Hero Section -->
     <section class="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img src={`${MEDIA_URL}/avValley-stage.jpg`} alt="Large outdoor concert stage at night with professional lighting" class="w-full h-full object-cover object-center" />
+        <img src="https://media.avvalley.com/media/avValley-stage.jpg" alt="Large outdoor concert stage at night with professional lighting" class="w-full h-full object-cover object-center" />
         <div class="absolute inset-0 bg-brand-bg/85"></div>
       </div>
 
@@ -139,7 +138,7 @@ const faqSchema = getFAQSchema(faqItems);
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <!-- Image -->
           <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl reveal group">
-            <img src={`${MEDIA_URL}/IMG_2229.jpg`} alt="22x20 Mobile Stage Setup" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
+            <img src="https://media.avvalley.com/media/IMG_2229.jpg" alt="22x20 Mobile Stage Setup" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-brand-secondary/40 mix-blend-multiply pointer-events-none"></div>
 
             <div class="absolute bottom-6 right-6 bg-brand-bg/90 backdrop-blur border border-brand-border px-4 py-2 rounded-lg flex gap-4">
@@ -212,7 +211,7 @@ const faqSchema = getFAQSchema(faqItems);
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Package 1: Stage and Sound -->
           <a href="/mobile-stage-rental" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline">
-            <img src={`${MEDIA_URL}/stage-banner.jpg`} alt="Stage and Sound" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://media.avvalley.com/media/stage-banner.jpg" alt="Stage and Sound" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
               <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Mobile Stage Rental</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Professional 22' × 20' mobile stage with sound, lighting, and equipment packages for outdoor events.</p>
@@ -221,7 +220,7 @@ const faqSchema = getFAQSchema(faqItems);
 
           <!-- Package 2: LED Walls -->
           <a href="/projection-mapping" id="led-walls" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 100ms;">
-            <img src={`${MEDIA_URL}/Avalley-projection-mapping-concert.webp`} alt="LED Walls" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://media.avvalley.com/media/Avalley-projection-mapping-concert.webp" alt="LED Walls" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
               <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Projection Mapping & LED Walls</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Professional projection mapping and LED displays for dynamic visuals, presentations, branding, and immersive event experiences.</p>
@@ -230,7 +229,7 @@ const faqSchema = getFAQSchema(faqItems);
 
           <!-- Package 3: Outdoor Movies -->
           <a href="/outdoor-movie-rentals" id="outdoor-movies" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 200ms;">
-            <img src={`${MEDIA_URL}/POOL-PARTY.jpg`} alt="Outdoor Movies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://media.avvalley.com/media/POOL-PARTY.jpg" alt="Outdoor Movies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
               <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Air Screen Movie Packages</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Professional air screens and projection for outdoor movie nights, backyard events, and community gatherings.</p>
@@ -239,7 +238,7 @@ const faqSchema = getFAQSchema(faqItems);
 
           <!-- Package 4: Silent Disco Party -->
           <a href="/silent-disco-rentals" class="relative h-[400px] rounded-xl overflow-hidden group border border-brand-border reveal card-gradient cursor-pointer block hover:no-underline" style="transition-delay: 300ms;">
-            <img src={`${MEDIA_URL}/Avvalley-silent-disco-feastival.webp`} alt="Silent Disco Party" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://media.avvalley.com/media/Avvalley-silent-disco-feastival.webp" alt="Silent Disco Party" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 z-20 flex flex-col justify-end p-8">
               <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brand-blue transition-colors">Silent Disco Party</h3>
               <p class="text-brand-muted mb-4 line-clamp-2">Wireless headphone systems for unique entertainment at weddings, corporate events, festivals, and private parties.</p>
@@ -374,7 +373,7 @@ const faqSchema = getFAQSchema(faqItems);
 
           <!-- Image -->
           <div class="order-1 lg:order-2 relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl reveal">
-            <img src={`${MEDIA_URL}/IMG_2218.jpg`} alt="Concert Stage Setup Production" class="w-full h-auto object-cover aspect-square md:aspect-[4/5] object-center" />
+            <img src="https://media.avvalley.com/media/IMG_2218.jpg" alt="Concert Stage Setup Production" class="w-full h-auto object-cover aspect-square md:aspect-[4/5] object-center" />
             <div class="absolute inset-0 bg-brand-bg/30"></div>
           </div>
         </div>
