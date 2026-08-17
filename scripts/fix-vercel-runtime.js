@@ -2,7 +2,7 @@
 
 /**
  * Fix Vercel runtime after build
- * Changes nodejs18.x to nodejs20.x in .vc-config.json
+ * Changes nodejs runtime to nodejs24.x in .vc-config.json
  */
 
 import fs from 'fs';
@@ -21,9 +21,9 @@ try {
   if (fs.existsSync(configPath)) {
     const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
 
-    if (config.runtime === 'nodejs18.x') {
-      console.log('Updating runtime from nodejs18.x to nodejs20.x...');
-      config.runtime = 'nodejs20.x';
+    if (config.runtime !== 'nodejs24.x') {
+      console.log(`Updating runtime from ${config.runtime} to nodejs24.x...`);
+      config.runtime = 'nodejs24.x';
       fs.writeFileSync(configPath, JSON.stringify(config, null, '\t'));
       console.log('✓ Runtime updated successfully');
     } else {
