@@ -100,25 +100,126 @@ export function getMobileStageRentalSchema() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Mobile Stage Rental",
-    "description": "22' × 20' professional mobile stage rental for outdoor events, festivals, churches, conferences, and productions in Arizona.",
+    "description": "Professional 22' × 20' mobile outdoor stage rental for concerts, festivals, churches, corporate events, and community gatherings in Phoenix, Mesa, and San Tan Valley, Arizona.",
     "url": "https://avvalley.com/mobile-stage-rental",
+    "image": "https://media.avvalley.com/media/stage-banner.jpg",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://avvalley.com"
+      "@id": "https://avvalley.com",
+      "name": "AvValley",
+      "telephone": "480-567-4215",
+      "email": "info@avvalley.com"
     },
     "serviceType": "Equipment Rental",
-    "areaServed": {
-      "@type": "GeoShape",
-      "addressCountry": "US",
-      "addressRegion": "AZ"
-    },
-    "priceRange": "$3000 - $4000+",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Phoenix",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      },
+      {
+        "@type": "City",
+        "name": "Mesa",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      },
+      {
+        "@type": "City",
+        "name": "San Tan Valley",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      },
+      {
+        "@type": "City",
+        "name": "Scottsdale",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      },
+      {
+        "@type": "City",
+        "name": "Tempe",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      },
+      {
+        "@type": "City",
+        "name": "Chandler",
+        "addressCountry": "US",
+        "addressRegion": "AZ"
+      }
+    ],
+    "priceRange": "$3000 - $10000+",
+    "aggregateOffer": {
+      "@type": "AggregateOffer",
       "priceCurrency": "USD",
-      "price": "3000"
-    }
+      "lowPrice": "3000",
+      "highPrice": "10000",
+      "offerCount": "4",
+      "availability": "https://schema.org/InStock",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Stage-Only Rental",
+          "description": "Portable outdoor stage delivery, setup, and breakdown. Perfect for customers with their own AV or production team.",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Stage + Sound System Rental",
+          "description": "Professional stage with main speakers, mixer, and microphones. Ideal for speaking events, churches, and smaller productions.",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Band-Ready Package",
+          "description": "Stage with line-array sound system, subwoofers, stage monitors, mixer, microphones, and stage lighting. Perfect for concerts, festivals, and live bands.",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Full Event AV Package",
+          "description": "Complete stage with professional sound, lighting, LED walls or projection screens, podium, and event-specific equipment. For larger productions requiring coordinated staging and AV.",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    "makesOffer": [
+      {
+        "@type": "Service",
+        "name": "Outdoor Concert Stage Rental",
+        "url": "https://avvalley.com/mobile-stage-rental#concert"
+      },
+      {
+        "@type": "Service",
+        "name": "Church Outdoor Stage Rental",
+        "url": "https://avvalley.com/mobile-stage-rental#church"
+      },
+      {
+        "@type": "Service",
+        "name": "Corporate Event Stage Rental",
+        "url": "https://avvalley.com/mobile-stage-rental#corporate"
+      },
+      {
+        "@type": "Service",
+        "name": "Wedding Ceremony Stage Rental",
+        "url": "https://avvalley.com/mobile-stage-rental#wedding"
+      },
+      {
+        "@type": "Service",
+        "name": "Nonprofit & Community Event Stage",
+        "url": "https://avvalley.com/mobile-stage-rental#nonprofit"
+      },
+      {
+        "@type": "Service",
+        "name": "B2B Stage Rental for AV Companies",
+        "url": "https://avvalley.com/mobile-stage-rental#b2b"
+      }
+    ]
   };
 }
 
