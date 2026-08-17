@@ -51,7 +51,9 @@ const faqItems = [
 const faqSchema = getFAQSchema(faqItems);
 ---
 
-<BaseLayout>
+<BaseLayout
+  canonical="https://www.avvalley.com/"
+>
   <main class="flex-grow" style="margin-top: 80px;">
     <!-- Schema Markup -->
     <script type="application/ld+json" set:html={JSON.stringify(homepageSchema)} />
